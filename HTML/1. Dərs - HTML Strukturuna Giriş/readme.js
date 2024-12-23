@@ -10,7 +10,7 @@
 //? 1. **Masaüstü tətbiqlər yaratmaq:** Electron.js istifadə edərək veb texnologiyaları ilə masaüstü tətbiqlər inkişaf etdirə bilərlər.
 //? 2. **Mobil tətbiqlər yaratmaq:** React Native və ya Vue Native ilə mobil tətbiqlər hazırlaya bilərlər.
 //? 3. **Backend proqramlaşdırma:** Node.js istifadə edərək server tərəfində tətbiqlər inkişaf etdirə bilərlər.
-//? 4. **Tam Yığma (Full-Stack) inkişaf:** Frontend və backend texnologiyalarını birləşdirərək tam tətbiqlər inkişaf etdirə bilərlər.
+//? 4. **Full-Stack:** Frontend və backend texnologiyalarını birləşdirərək tam tətbiqlər inkişaf etdirə bilərlər.
 
 
 //* Frontend Developerlər Hansı Proqramlaşdırma Dillərini Bilməlidirlər?
@@ -25,7 +25,6 @@
 //? 1. **React.js**
 //? 2. **Vue.js**
 //? 3. **Angular**
-
 
 //* HTML-in AÇILIŞI NƏDİR?
 //? HTML-in açılışı, HyperText Markup Language
@@ -43,7 +42,6 @@
 //* HTML OLMASA NƏ OLAR?
 //? HTML olmadan veb səhifələri qurmaq mümkün olmazdı. Çünki HTML, veb səhifələrinin strukturunun təməlini təşkil edir. Bu olmadan veb səhifəsi yalnız şəkillər və mətn olmadan məna daşımazdı. HTML səhifə qurulması və məlumatların təqdimatı üçün vacibdir.
 
-
 //* HTML ELEMENTLƏR NƏDİR?
 //? HTML elementləri, veb səhifəsindəki məzmunun hissələrini müəyyən edən tərtibatlardır. Məsələn, başlıqlar, mətnlər, şəkillər və digər komponentlər HTML elementləri ilə təmsil olunur.
 //? Əsas HTML elementləri:
@@ -53,7 +51,6 @@
 //? - `<a>` - keçid (link)
 //? - `<ul>` və `<ol>` - sırasız və sıralı siyahılar
 //? - `<li>` - siyahı maddəsi
-
 
 //* HTML Yeni Elementlər
 //? HTML5 ilə bəzi yeni elementlər təqdim edilmişdir:
