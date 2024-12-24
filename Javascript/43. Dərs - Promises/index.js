@@ -2,24 +2,20 @@
 
 //* **Promise Nədir?**
 
+//* Promise
+//* İnsanlar bir fəaliyyət görmək üçün ya özlərinə, ya da başqalarına vəd verirlər. Əgər biz verdiyimiz vədi tutarsaq, başqalarını sevindirərik, əgər tutmasaq, narazılıq doğura bilər. JavaScript-də Promise də yuxarıdakı misallarla oxşar bir konseptə malikdir.
 
-// Promise
-// İnsanlar bir fəaliyyət görmək üçün ya özlərinə, ya da başqalarına vəd verirlər. Əgər biz verdiyimiz vədi tutarsaq, başqalarını sevindirərik, əgər tutmasaq, narazılıq doğura bilər. JavaScript-də Promise də yuxarıdakı misallarla oxşar bir konseptə malikdir.
+//* Promise, JavaScript-də asinxron əməliyyatları idarə etmək üçün bir yoldur. Bu, asinxron əməliyyatların gələcəkdə uğurlu nəticəsini və ya uğursuzluq səbəbini idarə etməyə imkan verir. Bu, asinxron metodların sinxron metodlar kimi dəyərləri geri qaytarmasına imkan verir: dərhal son dəyəri qaytarmaq əvəzinə, asinxron metod, gələcəkdə bu dəyəri təmin etmək üçün bir vəd (Promise) qaytarır.
 
-// Promise, JavaScript-də asinxron əməliyyatları idarə etmək üçün bir yoldur. Bu, asinxron əməliyyatların gələcəkdə uğurlu nəticəsini və ya uğursuzluq səbəbini idarə etməyə imkan verir. Bu, asinxron metodların sinxron metodlar kimi dəyərləri geri qaytarmasına imkan verir: dərhal son dəyəri qaytarmaq əvəzinə, asinxron metod, gələcəkdə bu dəyəri təmin etmək üçün bir vəd (Promise) qaytarır.
+//* Promise-in bir neçə vəziyyəti var:
 
-// Promise-in bir neçə vəziyyəti var:
+//? pending: başlanğıc vəziyyəti, nə yerinə yetirilib, nə də rədd edilib.
+//? fulfilled: əməliyyatın müvəffəqiyyətlə tamamlandığını bildirir.
+//? rejected: əməliyyatın uğursuz olduğunu bildirir.
 
-// pending: başlanğıc vəziyyəti, nə yerinə yetirilib, nə də rədd edilib.
-// fulfilled: əməliyyatın müvəffəqiyyətlə tamamlandığını bildirir.
-// rejected: əməliyyatın uğursuz olduğunu bildirir.
-
-
-// Pending vəziyyətində olan bir Promise, ya dəyər ilə yerinə yetirilə bilər, ya da səbəb (xətalı məlumat) ilə rədd edilə bilər. Bu iki variantdan biri baş verdikdə, promise-in then metoduyla qoşulmuş əlaqəli idarəçilər çağırılır. (Əgər promise artıq yerinə yetirilib və ya rədd edilibsə, uyğun idarəçi əlavə olunduqda belə çağırılacaq, buna görə də asinxron əməliyyat tamamlanması ilə idarəçilərin əlavə edilməsi arasında yarış vəziyyəti yoxdur.)
-
+//* Pending vəziyyətində olan bir Promise, ya dəyər (value) ilə yerinə yetirilə bilər, ya da səbəb (reason) ilə rədd edilə bilər. Bu iki variantdan biri baş verdikdə, promise-in then metoduyla qoşulmuş əlaqəli idarəçilər çağırılır. (Əgər promise artıq yerinə yetirilib və ya rədd edilibsə, uyğun idarəçi əlavə olunduqda belə çağırılacaq, buna görə də asinxron əməliyyat tamamlanması ilə idarəçilərin əlavə edilməsi arasında yarış vəziyyəti yoxdur.)
 
 // Promise.prototype.then() və Promise.prototype.catch() metodları da promise qaytardığı üçün zəncirlənə bilər.
-
 
 // Callback
 // Promise-i yaxşı anlamaq üçün əvvəlcə callback funksiyasını anlamaq lazımdır. Gəlin aşağıdakı callback-lara baxaq. Aşağıdakı kod bloklarında callback və promises arasındakı fərqi görəcəksiniz.
@@ -27,149 +23,144 @@
 // callback
 // Gəlin iki parametr qəbul edə bilən bir callback funksiyasını nəzərdən keçirək. Birinci parametr err, ikinci parametr isə nəticədir. Əgər err parametri false olsa, səhv olmayacaq, əks halda səhv dövrü qaytarılacaq.
 
-
 // Bu nümunədə err dəyəri var və err blokunu qaytaracaq.
-const doSomething = callback => {
+const doSomething = (callback) => {
   setTimeout(() => {
-    const skills = ['HTML', 'CSS', 'JS']
-    callback('ERROR', skills)
-  }, 2000)
-}
+    const skills = ["HTML", "CSS", "JS"];
+    callback("ERROR", skills);
+  }, 2000);
+};
 const callback = (err, result) => {
   if (err) {
-    return console.log(err)
+    return console.log(err);
   }
-  return console.log(result)
-}
+  return console.log(result);
+};
 
-doSomething(callback)
+doSomething(callback);
 // 2 saniyədən sonra yazılacaq
 // ERROR
 
 // Bu nümunədə err false-dir və nəticə dövrü qaytaracaq.
 
-const doSomething1 = callback => {
+const doSomething1 = (callback) => {
   setTimeout(() => {
-    const skills = ['HTML', 'CSS', 'JS']
-    callback(false, skills)
-  }, 2000)
-}
+    const skills = ["HTML", "CSS", "JS"];
+    callback(false, skills);
+  }, 2000);
+};
 
 doSomething((err, result) => {
   if (err) {
-    return console.log(err)
+    return console.log(err);
   }
-  return console.log(result)
-})
-// 2 saniyədən sonra bacarıqlar yazılacaq
-["HTML", "CSS", "JS"]
+  return console.log(result);
+})[
+  // 2 saniyədən sonra bacarıqlar yazılacaq
+  ("HTML", "CSS", "JS")
+];
 
 // Promise konstruktoru
 // Promise-i Promise konstruktoru istifadə edərək yarada bilərik. Yeni bir promise yaratmaq üçün new sözünü və ardınca Promise sözünü və sonra mötərizələri istifadə edirik. Mötərizələrdə callback funksiyası daxil edilir. Promise callback funksiyasının iki parametri var: resolve və reject funksiyaları.
 
 const promise = new Promise((resolve, reject) => {
-  resolve('uğur')
-  reject('uğursuzluq')
-})
+  resolve("uğur");
+  reject("uğursuzluq");
+});
 
 // Promise
 const doPromise = new Promise((resolve, reject) => {
   setTimeout(() => {
-    const skills = ['HTML', 'CSS', 'JS']
+    const skills = ["HTML", "CSS", "JS"];
     if (skills.length > 0) {
-      resolve(skills)
+      resolve(skills);
     } else {
-      reject('Nəsə səhv olub')
+      reject("Nəsə səhv olub");
     }
-  }, 2000)
-})
+  }, 2000);
+});
 
 doPromise
-  .then(result => {
-    console.log(result)
-  })
-  .catch(error => console.log(error))
+  .then((result) => console.log(result))
+  .catch((error) => console.log(error));
 // ["HTML", "CSS", "JS"]
 
 // Yuxarıdakı promise resolve ilə yerinə yetirildi. İndi promise-in reject ilə yerinə yetirildiyi bir nümunəyə baxaq.
 
 const doPromise1 = new Promise((resolve, reject) => {
   setTimeout(() => {
-    const skills = ['HTML', 'CSS', 'JS']
-    if (skills.includes('Node')) {
-      resolve('fullstack developer')
+    const skills = ["HTML", "CSS", "JS"];
+    if (skills.includes("Node")) {
+      resolve("fullstack developer");
     } else {
-      reject('Nəsə səhv olub')
+      reject("Nəsə səhv olub");
     }
-  }, 2000)
-})
+  }, 2000);
+});
 
 doPromise
-  .then(result => {
-    console.log(result)
+  .then((result) => {
+    console.log(result);
   })
-  .catch(error => console.error(error))
+  .catch((error) => console.error(error));
 // Nəsə səhv olub
 
 // Fetch API
 // Fetch API, resursları (şəbəkə üzərindən də daxil olmaqla) əldə etmək üçün interfeys təmin edir. XMLHttpRequest istifadə edən hər kəs üçün tanış olacaq, lakin yeni API daha güclü və çevik xüsusiyyətlər təqdim edir. Bu çağırışda fetch istifadə edərək URL və API-lərə necə müraciət edəcəyimizi görəcəyik. Bundan əlavə, fetch API istifadə edərək şəbəkə resurslarına girmək üçün promises-in necə istifadə edildiyini nümayiş etdirəcəyik.
 
-const url = 'https://restcountries.com/v2/all' // ölkələr API-si
+const url = "https://restcountries.com/v2/all"; // ölkələr API-si
 fetch(url)
-  .then(response => response.json()) // API məlumatlarını JSON olaraq əldə etmək
-  .then(data => {
+  .then((response) => response.json()) // API məlumatlarını JSON olaraq əldə etmək
+  .then((data) => {
     // məlumatı əldə edirik
-    console.log(data)
+    console.log(data);
   })
-  .catch(error => console.error(error)) // əgər nəsə səhv olsa, səhvi idarə edirik
+  .catch((error) => console.error(error)); // əgər nəsə səhv olsa, səhvi idarə edirik
 
 // Async və Await
-// Async və await promises-ləri idarə etməyin zərif bir yoludur. Bu, başa düşməsi asan və yazması təmizdir.
+// Async və await promises-ləri idarə etməyin zərif bir yoludur. Bunun başa düşülməsi asan və yazılması təmizdir.
 
 const square = async function (n) {
-  return n * n
-}
+  return n * n;
+};
 
-square(2)
-`Promise {<resolved>: 4}`
+square(2)`Promise {<resolved>: 4}`;
 // Funksiyanın önündəki async sözü o deməkdir ki, həmin funksiya promise qaytaracaq. Yuxarıdakı square funksiyası dəyər əvəzinə promise qaytarır.
 
 // Promise-dən dəyəri necə əldə edirik? Promise-dən dəyəri əldə etmək üçün await açar sözündən istifadə edəcəyik.
 
 const square1 = async function (n) {
-  return n * n
-}
-const value = await square(2)
-console.log(value)
+  return n * n;
+};
+const value = await square(2);
+console.log(value);
 // 4
 
 // İndi, yuxarıdakı nümunədən göründüyü kimi, funksiyanın önündə async yazmaq promise yaradır və promise-dən dəyəri əldə etmək üçün await istifadə edirik. Async və await bir yerdə işləyir, biri olmadan digəri mövcud ola bilməz.
 
-
 // İndi, həm promise metodunu, həm də async və await metodunu istifadə edərək API məlumatlarını əldə edək.
 
-
 // Promise
-const url1 = 'https://restcountries.com/v2/all'
+const url1 = "https://restcountries.com/v2/all";
 fetch(url1)
-  .then(response => response.json())
-  .then(data => {
-    console.log(data)
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
   })
-  .catch(error => console.error(error))
+  .catch((error) => console.error(error));
 
 // async və await
 const fetchData = async () => {
   try {
-    const response = await fetch(url)
-    const countries = await response.json()
-    console.log(countries)
+    const response = await fetch(url);
+    const countries = await response.json();
+    console.log(countries);
   } catch (err) {
-    console.error(err)
+    console.error(err);
   }
-}
-console.log('===== async və await')
-fetchData()
+};
+console.log("===== async və await");
+fetchData();
 
 //? - Promise JavaScript-də asenkron əməliyyatların idarə edilməsi üçün istifadə olunur.
 //? - Promise gələcəkdə tamamlanacaq və ya xəta ilə nəticələnəcək bir əməliyyatı təsvir edir.
@@ -293,8 +284,7 @@ async function fetchData() {
 fetchData();
 
 //* **Xülasə:**
-//? 1. **Promise:** Asenkron əməliyyatları daha sadə idarə etmək üçün əsas mexanizmdir.
+//? 1. **Promise:** Asinxron əməliyyatları daha sadə idarə etmək üçün əsas mexanizmdir.
 //? 2. **Methods:** `all`, `race`, `allSettled`, `any` müxtəlif ssenarilər üçün istifadə olunur.
 //? 3. **Chaining və Async/Await:** Promiselərin oxunaqlı idarə edilməsi üçün geniş istifadə edilir.
 //? 4. **Error Handling:** `catch` və `finally` ilə xətalar effektiv şəkildə idarə edilir.
-
