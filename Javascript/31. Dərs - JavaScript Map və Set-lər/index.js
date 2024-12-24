@@ -110,3 +110,183 @@ mySet.forEach(value => {
 //? - `Set`-də təkrarlanan dəyərlər yoxdur, `Map`-də isə eyni açara fərqli qiymətlər təyin edilə bilər.
 //? - `Map` daha çox açar-qiymət cütləri ilə işləyir, `Set` isə yalnız unikal dəyərlərlə işləyir.
 
+// Set
+// Set, elementlərin toplusudur. Set yalnız unikal elementlərdən ibarət ola bilər. Aşağıda set yaratmaq üsuluna baxaq.
+
+// Boş bir set yaratmaq
+const companies2 = new Set();
+console.log(companies); // Set(0) {}
+
+// Array-dən set yaratmaq
+const languages = [
+  'English',
+  'Finnish',
+  'English',
+  'French',
+  'Spanish',
+  'English',
+  'French',
+];
+
+const setOfLanguages = new Set(languages);
+console.log(setOfLanguages); // Set(4) {"English", "Finnish", "French", "Spanish"}
+
+// Set, iterasiya edilə bilən bir obyekt olduğu üçün elementlər üzərində iterasiya edə bilərik.
+const languages3 = [
+  'English',
+  'Finnish',
+  'English',
+  'French',
+  'Spanish',
+  'English',
+  'French',
+];
+
+const setOfLanguages1 = new Set(languages);
+
+for (const language of setOfLanguages) {
+  console.log(language); // English, Finnish, French, Spanish
+}
+
+// Set-ə element əlavə etmək
+const companies = new Set(); // boş set yaratmaq
+console.log(companies.size); // 0
+
+companies.add('Google'); // set-ə element əlavə etmək
+companies.add('Facebook');
+companies.add('Amazon');
+companies.add('Oracle');
+companies.add('Microsoft');
+console.log(companies.size); // 5 element var
+console.log(companies); // Set(5) {"Google", "Facebook", "Amazon", "Oracle", "Microsoft"}
+
+// Həmçinin, dövr istifadə edərək set-ə element əlavə edə bilərik.
+const companies1 = ['Google', 'Facebook', 'Amazon', 'Oracle', 'Microsoft'];
+setOfCompanies = new Set();
+for (const company of companies) {
+  setOfCompanies.add(company);
+}
+console.log(setOfCompanies); // Set(5) {"Google", "Facebook", "Amazon", "Oracle", "Microsoft"}
+
+// Set-dən element silmək
+// Set-dən element silmək üçün delete metodundan istifadə edə bilərik.
+console.log(companies.delete('Google'));
+console.log(companies.size); // 4 element qaldı set-də
+
+// Set-də elementin olub-olmamasını yoxlamaq
+// has metodu bir elementin set-də olub-olmamasını yoxlamağa kömək edir.
+console.log(companies.has('Apple')); // false
+console.log(companies.has('Facebook')); // true
+
+// Set-i təmizləmək
+// Bu metod bütün elementləri set-dən silir.
+companies.clear();
+console.log(companies); // Set(0) {}
+
+// Aşağıdakı nümunəyə baxaraq set istifadə etməyi öyrənin.
+const languages1 = [
+  'English',
+  'Finnish',
+  'English',
+  'French',
+  'Spanish',
+  'English',
+  'French',
+];
+const langSet = new Set(languages);
+console.log(langSet); // Set(4) {"English", "Finnish", "French", "Spanish"}
+console.log(langSet.size); // 4
+
+const counts = [];
+const count = {};
+
+for (const l of langSet) {
+  const filteredLang = languages.filter((lng) => lng === l);
+  console.log(filteredLang); // ["English", "English", "English"]
+  counts.push({ lang: l, count: filteredLang.length });
+}
+console.log(counts); // [{ lang: 'English', count: 3 }, { lang: 'Finnish', count: 1 }, { lang: 'French', count: 2 }, { lang: 'Spanish', count: 1 }]
+
+// Digər set istifadə nümunəsi: Məsələn, array-də unikal elementləri saymaq.
+const numbers = [5, 3, 2, 5, 5, 9, 4, 5];
+const setOfNumbers = new Set(numbers);
+
+console.log(setOfNumbers); // Set(5) {5, 3, 2, 9, 4}
+
+// Set-lərin birləşməsi (Union of sets)
+// İki set-in birləşməsini tapmaq üçün spread operatorunu istifadə edə bilərik. A və B setlərinin birləşməsi (A U B).
+let a = [1, 2, 3, 4, 5];
+let b = [3, 4, 5, 6];
+let c = [...a, ...b];
+
+let A = new Set(a);
+let B = new Set(b);
+let C = new Set(c);
+
+console.log(C); // Set(6) {1, 2, 3, 4, 5, 6}
+
+// Set-lərin kəsişməsi (Intersection of sets)
+// İki set-in kəsişməsini tapmaq üçün filter metodunu istifadə edə bilərik. A və B setlərinin kəsişməsi (A ∩ B).
+let a2 = [1, 2, 3, 4, 5];
+let b2 = [3, 4, 5, 6];
+
+let A2 = new Set(a);
+let B2 = new Set(b);
+
+let c2 = a.filter((num) => B.has(num));
+let C2 = new Set(c);
+
+console.log(C); // Set(3) {3, 4, 5}
+
+// Set-lərin fərqi (Difference of sets)
+// İki set-in fərqini tapmaq üçün filter metodunu istifadə edə bilərik. A və B setlərinin fərqi (A \ B).
+let a1 = [1, 2, 3, 4, 5];
+let b1 = [3, 4, 5, 6];
+
+let A1 = new Set(a);
+let B1 = new Set(b);
+
+let c1 = a.filter((num) => !B.has(num));
+let C1 = new Set(c);
+
+console.log(C); // Set(2) {1, 2}
+
+// Map
+// Boş bir Map yaratmaq
+const map = new Map();
+console.log(map); // Map(0) {}
+
+// Array-dən Map yaratmaq
+const countries = [
+  ['Finland', 'Helsinki'],
+  ['Sweden', 'Stockholm'],
+  ['Norway', 'Oslo'],
+];
+const map1 = new Map(countries);
+console.log(map); // Map(3) {"Finland" => "Helsinki", "Sweden" => "Stockholm", "Norway" => "Oslo"}
+console.log(map.size); // 3
+
+// Map-ə dəyərlər əlavə etmək
+const countriesMap = new Map();
+console.log(countriesMap.size); // 0
+countriesMap.set('Finland', 'Helsinki');
+countriesMap.set('Sweden', 'Stockholm');
+countriesMap.set('Norway', 'Oslo');
+console.log(countriesMap); // Map(3) {"Finland" => "Helsinki", "Sweden" => "Stockholm", "Norway" => "Oslo"}
+console.log(countriesMap.size); // 3
+
+// Map-dən dəyər almaq
+console.log(countriesMap.get('Finland')); // Helsinki
+
+// Map-də açarın olub-olmamasını yoxlamaq
+// has metodu bir açarın map-də olub-olmamasını yoxlamağa kömək edir.
+console.log(countriesMap.has('Finland')); // true
+
+// Map-dən bütün dəyərləri dövr ilə almaq
+for (const country of countriesMap) {
+  console.log(country); // ["Finland", "Helsinki"], ["Sweden", "Stockholm"], ["Norway", "Oslo"]
+}
+
+for (const [country, city] of countriesMap) {
+  console.log(country, city); // Finland Helsinki, Sweden Stockholm, Norway Oslo
+}

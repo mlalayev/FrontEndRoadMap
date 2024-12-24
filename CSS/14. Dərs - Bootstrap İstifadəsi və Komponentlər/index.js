@@ -1,140 +1,142 @@
-//* 14. Gün - Bootstrap İstifadəsi və Komponentlər
+//* 14. Gün - Bootstrap 5 İstifadəsi və Komponentlər
 
-//? **Bootstrap Grid Sistemi**
-//? Bootstrap-in **Grid Sistemi** veb səhifələrin reaktiv dizaynını yaratmaq üçün çox faydalıdır.
-//? Grid sistemi, 12 sütundan ibarət bir quruluşdan istifadə edir.
-//? Siz bir sıra daxilində müxtəlif ölçülü sütunlar yarada bilərsiniz.
-//? Grid sistemi ilə həmçinin müxtəlif ekran ölçüləri üçün uyğunlaşma təmin etmək mümkündür.
+//? **Bootstrap 5 Containers və Breakpoints**
+//? Bootstrap 5-də **Container** komponentləri veb səhifə dizaynını çevik və reaktiv etmək üçün istifadə olunur.
+//? Container-lar səhifənin içeriğini düzgün bir şəkildə mərkəzləşdirir və ona müəyyən bir maksimal genişlik təyin edir.
 
-//* **Row və Col**:
-//? **row** sinifi, elementləri üfüqi sırada yerləşdirir, **col** sinifi isə sütunları təyin edir.
-//? Hər bir **row** daxilində 12 sütun yerləşdirə bilərsiniz.
-//* **Nümunə**: 12 sütunun tam genişliyini istifadə etmək.
-//* `div.row {`
-//* `  <div class="col-12">Content 1</div>`  //? 12 sütun tam genişlik alır
-//* `}</div>`
+//* **Container**:
+//? **.container** sinifi tam genişlikdə olan, lakin müəyyən bir maksimal ölçüyə sahib konteynerdir.
+//? **.container-fluid** sinifi tam genişlikdə olan və ekranın ölçüsünə uyğunlaşan konteynerdir. 
+//* Məsələn, bu iki konteyner sinifi aşağıdakı kimi istifadə edilir:
+`<div class="container">
+  <p>Bu konteynerin eni 1200px-dən çox olmayacaq.</p>
+</div>
 
-//? **İki Sütunlu Layout**:
-//* `div.row {`
-//* `  <div class="col-md-6">Content 1</div>`  //? 6 sütun, ekran ölçüsünə uyğun olaraq yarıya bölünür.
-//* `  <div class="col-md-6">Content 2</div>`  //? 6 sütun, digər yarım.
-//* `}</div>`
+<div class="container-fluid">
+  <p>Bu konteyner tam genişlikdədir.</p>
+</div>`
 
-//? **Sütun Genişliklərini Təyin Etmək**:
-//* `div.row {`
-//* `  <div class="col-4">Content 1</div>`  //? 4 sütun genişlik alır.
-//* `  <div class="col-8">Content 2</div>`  //? 8 sütun genişlik alır.
-//* `}</div>`
+//? **Breakpoints**:
+//? Bootstrap 5, responsiv dizayn yaratmaq üçün **breakpoints** istifadə edir. Bu breakpoints, müxtəlif ekran ölçülərinə uyğunlaşmağa imkan verir.
+//? Aşağıdakı siniflər breakpoints ilə işləyir: 
+//? **.col-sm-**, **.col-md-**, **.col-lg-**, **.col-xl-**, **.col-xxl-**.
+//* Məsələn, aşağıdakı kodla ekran ölçüsünə görə sütun ölçülərini təyin edə bilərsiniz:
+`<div class="row">
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">Content</div>
+</div>
+`
+//? **Grid Sistemi (Basic)**
+//? Bootstrap-in Grid sistemi 12 sütunlu bir quruluş istifadə edir. `col-*` sinifləri ilə, müxtəlif ekran ölçülərinə uyğunlaşan sütunlar yaradılır.
+//? `col-12` bütün genişliyi alır, `col-sm-6` isə kiçik ekranlarda iki sütunlu bir layout yaradır.
+`<div class="row">
+  <div class="col-12 col-md-6">Content 1</div>
+  <div class="col-12 col-md-6">Content 2</div>
+</div>`
 
-//? **Responsive Grid**:
-//? Bootstrap-in `col-`, `col-sm-`, `col-md-`, `col-lg-` sinifləri ilə sütunlar, müxtəlif ekran ölçülərinə uyğunlaşır.
-//* `div.row {`
-//* `  <div class="col-sm-12 col-md-6 col-lg-4">Content</div>`  //? 12 sütun kiçik ekranlar üçün, 6 orta ölçülər üçün və 4 böyük ekranlar üçün.
-//* `}</div>`
+//? **Bootstrap Typography**
+//? Bootstrap 5-də typografi komponentləri, mətni tərtib etmək və stil vermək üçün asan yollar təqdim edir. 
+//? Aşağıdakı siniflər mətnin ölçüsünü, qalınlığını və rəngini dəyişdirmək üçün istifadə olunur:
+//* **.text-center**, **.text-right**, **.text-left** - mətni sırasıyla mərkəzləşdirir, sağa və ya sola hizalayır.
+//* **.text-uppercase**, **.text-lowercase**, **.text-capitalize** - mətni böyük, kiçik və ya baş hərflə yazdırır.
+//* **.font-weight-bold**, **.font-weight-normal** - mətnin qalınlığını təyin edir.
+//* **.lead** - mətni vurğulamaq üçün istifadə olunur.
 
-//* **Bootstrap Table Komponentləri**:
-//? Bootstrap, müxtəlif növ cədvəllər yaratmağa imkan verir və bu cədvəllərin responsive olmasını təmin edir.
+`<p class="text-center text-uppercase font-weight-bold">Bu bir başlıqdır.</p>`
 
-//* **Sadə Cədvəl**:
-//* `table` sinifi ilə cədvəl yarada bilərsiniz.
-//* `<table class="table">`
-//* `  <thead>`
-//* `    <tr>`
-//* `      <th>#</th>`
-//* `      <th>Ad</th>`
-//* `      <th>Yaş</th>`
-//* `    </tr>`
-//* `  </thead>`
-//* `  <tbody>`
-//* `    <tr>`
-//* `      <td>1</td>`
-//* `      <td>Ali</td>`
-//* `      <td>25</td>`
-//* `    </tr>`
-//* `  </tbody>`
-//* `</table>`
+//? **Bootstrap 5 Colors**
+//? Bootstrap 5-də rənglər müxtəlif komponentlər üçün əksər hallarda istifadə olunur.
+//? Bunlar həm fon, həm də mətni təyin etmək üçün istifadə edilə bilər.
+//? **.bg-primary**, **.bg-success**, **.bg-danger** və s. siniflər arxa plan rəngini təyin edir.
+//? **.text-white**, **.text-dark**, **.text-muted** sinifləri isə mətn rənglərini təyin edir.
 
-//? **Responsive Cədvəl**:
-//? Cədvəlin genişliyi ekranda sıxılmaması üçün **table-responsive** sinifini əlavə edirik.
-//* `<div class="table-responsive">`
-//* `  <table class="table">`
-//* `    ...`
-//* `  </table>`
-//* `</div>`
+`<div class="bg-primary text-white p-3">Bu mətn ağ rəngdədir, fon mavi olacaq</div>`
+//? **Bootstrap 5 Tables**
+//? Bootstrap 5 cədvəllər üçün stilizasiya təklif edir. Cədvəlin daha yaxşı görünməsi üçün müxtəlif siniflər mövcuddur:
+//* **.table** - sadə cədvəl yaratmaq üçün istifadə olunur.
+//* **.table-striped** - cədvəldə çubuqlar əlavə edir.
+//* **.table-bordered** - cədvəli sərhədlərlə bəzəyir.
+//* **.table-hover** - cədvəlin üzərinə gəldikdə hover effekti əlavə edir.
+//* **.table-sm** - cədvəli kiçik ölçüdə göstərir.
 
-//? **Cədvəl Stilizasiya**:
-//? Bootstrap həmçinin cədvəl üçün müxtəlif stildə komponentlər təqdim edir:
-//* `table-bordered` - Sərhədlərlə cədvəl.
-//* `table-striped` - Çizgilərlə cədvəl.
-//* `table-hover` - Hover (üzərinə gələndə) effektləri.
-//* `table-sm` - Kiçik ölçülü cədvəl.
+`<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Ad</th>
+      <th>Yaş</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Ali</td>
+      <td>25</td>
+    </tr>
+  </tbody>
+</table>
+`
+//? **Bootstrap 5 Images**
+//? Bootstrap 5-də şəkillər ilə işləyərkən reaktiv və uyumlu dizayn üçün müxtəlif siniflər mövcuddur:
+//* **.img-fluid** - şəkli resizdən asılı olmayaraq ekran ölçüsünə uyğunlaşdırır.
+//* **.rounded** - şəkli yuvarlaqlaşdırır.
+//* **.img-thumbnail** - şəkli bir çərçivə ilə göstərir.
 
-//* **Form Komponentləri**:
-//? Bootstrap form elementləri ilə istifadənin asanlığına görə, çox vaxt istifadə olunur. İstifadəçilərin rahat məlumat daxil etməsi üçün aşağıdakı komponentlər mövcuddur.
+`<img src="image.jpg" class="img-fluid rounded" alt="Şəkil">`
 
-//* **Text Input**:
-//* `input` sinifi ilə forma daxilində mətn daxil edilə bilər.
-//* `<input class="form-control" type="text" placeholder="Adınızı daxil edin">`
+//? **Bootstrap 5 Jumbotron**
+//? Jumbotron komponenti, böyük, vurğulanan bir məzmun bloku yaratmaq üçün istifadə olunur. Bu komponentdə əsasən başlıqlar və mətnlər göstərilir.
+//? **.jumbotron** sinifi artıq Bootstrap 5-də mövcud deyil, amma özünüz yaratmaq üçün bu stil təklif edilə bilər.
 
-//* **Color Input**:
-//* İstifadəçiyə rəng seçmək imkanı verən form sahəsi.
-//* `<input class="form-control" type="color">`
+`<div class="jumbotron">
+  <h1 class="display-4">Salam, dünya!</h1>
+  <p class="lead">Bu, Bootstrap 5-in təklif etdiyi böyük bir məzmundur.</p>
+</div>`
 
-//* **Checkbox və Radio Button**:
-//* Çoxlu seçimlər üçün checkbox və radio buttonlar istifadə edilir.
-//* `<input class="form-check-input" type="checkbox" id="checkbox1">`
-//* `<label class="form-check-label" for="checkbox1">Checkbox</label>`
-//* `<input class="form-check-input" type="radio" name="exampleRadios" id="radio1">`
-//* `<label class="form-check-label" for="radio1">Radio Button</label>`
+//? **Bootstrap 5 Alerts**
+//? Bootstrap 5-in alert komponenti, səhifədəki müxtəlif vəziyyətlərə cavab olaraq istifadəçiyə məlumat vermək üçün istifadə olunur.
+//? **.alert**, **.alert-success**, **.alert-danger** və digər siniflər ilə müxtəlif rənglərdə bildirişlər yaradıla bilər.
+`<div class="alert alert-success" role="alert">
+  Bu uğurlu əməliyyat idi!
+</div>`
 
-//* **Toggle Switch**:
-//* `form-switch` sinifi ilə toggle switch (keçid düyməsi) yarada bilərsiniz.
-//* `<div class="form-check form-switch">`
-//* `  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">`
-//* `  <label class="form-check-label" for="flexSwitchCheckDefault">Toggle switch</label>`
-//* `</div>`
+//? **Bootstrap 5 Buttons**
+//? Bootstrap 5-də butonlar üçün müxtəlif siniflər mövcuddur:
+//* **.btn-primary**, **.btn-secondary**, **.btn-danger**, **.btn-success** və s. - müxtəlif rənglərdə butonlar yaradır.
+//* **.btn-lg**, **.btn-sm** - butonun ölçüsünü dəyişir.
+//* **.btn-block** - butonu tam genişlikdə göstərir.
 
-//* **Input Group**:
-//? Input group ilə müxtəlif form elementlərini birləşdirə bilərsiniz (məsələn, mətn və ikonu birləşdirmək).
-//* `<div class="input-group">`
-//* `  <div class="input-group-prepend">`
-//* `    <span class="input-group-text">@</span>`
-//* `  </div>`
-//* `  <input type="text" class="form-control" placeholder="Username">`
-//* `</div>`
+`<button class="btn btn-primary">Primary Button</button>`
 
-//* **Floating Labels**:
-//* Floating labels istifadəçi ilə forma daxil edərkən labelın üzərində durmasını təmin edir.
-//* `<div class="form-floating">`
-//* `  <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">`
-//* `  <label for="floatingInput">Email address</label>`
-//* `</div>`
+//? **Bootstrap 5 Button Groups**
+//? Butonlar arasında qruplar yaratmaq üçün **.btn-group** sinifindən istifadə edilir. 
+//* **.btn-group-vertical** sinifi ilə butonlar şaquli şəkildə yerləşdirilə bilər.
+`<div class="btn-group">
+  <button class="btn btn-secondary">Button 1</button>
+  <button class="btn btn-secondary">Button 2</button>
+</div>`
 
-//* **Input Group Text**:
-//* `input-group-text` ilə input sahəsinə əlavə mətni daxil edə bilərsiniz.
-//* `<div class="input-group">`
-//* `  <span class="input-group-text">$</span>`
-//* `  <input type="text" class="form-control" placeholder="Amount">`
-//* `</div>`
+//? **Bootstrap 5 Badges**
+//? **.badge** sinifi ilə kiçik etiketlər və bildirişlər yaradılır. Məsələn, sayı göstərmək üçün istifadə edilir.
+//* **.badge-pill** - yuvarlaqlaşdırılmış etiketlər.
 
-//* **Input Range**:
-//* `input type="range"` ilə istifadəçilərə qiymət seçmək imkanı verən bir element yaratmaq mümkündür.
-//* `<input type="range" class="form-range" id="customRange1">`
+`<span class="badge bg-primary">Yeni</span>`
 
-//* **Button Group və Vertical Button Group**:
-//? Butonlar arasında qruplar yaratmaq üçün Bootstrap-in **btn-group** sinifindən istifadə edilir.
-//* `div.btn-group {`
-//* `  <button class="btn btn-primary">Button 1</button>`
-//* `  <button class="btn btn-secondary">Button 2</button>`
-//* `}</div>`
+//? **Bootstrap 5 Progress Bars**
+//? **.progress** və **.progress-bar** sinifləri ilə yükləmə çubuqları və irəliləyiş göstəriciləri yaradılır.
+//* **.progress-bar-striped** - çubuğa şaquli xətt əlavə edir.
+//* **.progress-bar-animated** - çubuğu animasiya ilə hərəkət etdirir.
 
-//? **Vertical Button Group**:
-//? Butonları şaquli yığmaq üçün `btn-group-vertical` sinifindən istifadə edilir.
-//* `div.btn-group-vertical {`
-//* `  <button class="btn btn-primary">Button 1</button>`
-//* `  <button class="btn btn-secondary">Button 2</button>`
-//* `}</div>`
+`<div class="progress">
+  <div class="progress-bar" style="width: 50%"></div>
+</div>`
 
-//? **Button Sinifləri**:
-//? Bootstrap müxtəlif növ butonlar üçün fərqli siniflər təqdim edir:
-//* `btn-primary`, `btn-secondary`, `btn-danger`, `btn-success`, `btn-warning`, `btn-info`, `btn-light`, `btn-dark`
+//? **Bootstrap 5 List Groups**
+//? **.list-group** sinifi ilə bir sıra elementlər yığılır və onlara fərqli stillər tətbiq edilir.
+//* **.list-group-item** - siyahı elementi.
+`<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action">Item 1</a>
+  <a href="#" class="list-group-item list-group-item-action">Item 2</a>
+</div>`
+
+//? **Nəticə**:
+//? Bootstrap 5, responsiv dizayn yaratmaq üçün güclü bir alətdir. Container, grid sistemi, typography, rənglər, cədvəllər, şəkillər, butonlar və s. komponentlər, istifadəçilərin rahatlıqla reaktiv və estetik səhifələr yaratmasına imkan verir.
