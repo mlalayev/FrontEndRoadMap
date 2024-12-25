@@ -31,7 +31,7 @@ const doSomething = (callback) => {
   }, 2000);
 };
 const callback = (err, result) => {
-  if (err) {
+  if (err == true) {
     return console.log(err);
   }
   return console.log(result);
