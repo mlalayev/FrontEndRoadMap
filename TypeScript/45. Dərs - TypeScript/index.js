@@ -13,25 +13,25 @@
 //* **Nümunə**:
 //? JavaScript-də tip müəyyən edilməsi yoxdur:
 
-//function greet(name) {
-//  return "Hello, " + name;
-//}
+function greet(name) {
+  return "Hello, " + name;
+}
 
-//console.log(greet("John"));  //Hello, John
+console.log(greet("John")); //Hello, John
 
 //? TypeScript-də tip təyini:
 
-`function greet(name: string): string {
-  //? "name" dəyişəninin tipi "string" olaraq təyin edilir.
-  return "Hello, " + name;
-}`
+//function greet(name: string): string {
+//? "name" dəyişəninin tipi "string" olaraq təyin edilir.
+//  return "Hello, " + name;
+//}
 
 console.log(greet("John")); //Hello, John
 //? Bu zaman `name` dəyişəni yalnız `string` tipini ala bilər, əgər başqa bir tip verilsə, TypeScript səhv verəcəkdir.
 
 //* **TypeScript-in Faydaları**:
 //? 1. **Daha Etibarlı Kodu Təmin Edir**: TypeScript-də yazdığınız kodun tipini əvvəlcədən müəyyən etdiyiniz üçün səhv tapmaq daha asandır.
-//? 2. **Kodunoxudulmasını Artırır**: Tiplər kodu daha anlaşılan edir. Hər hansı bir dəyişənin və ya funksiyanın hansı növ verilənlərlə işlədiyini görmək asandır.
+//? 2. **Kodun oxunaqlığını artırır**: Tiplər kodu daha anlaşılan edir. Hər hansı bir dəyişənin və ya funksiyanın hansı növ verilənlərlə işlədiyini görmək asandır.
 //? 3. **Daha Yaxşı IDE Dəstəyi**: TypeScript-də tiplərin mövcudluğu, IDE-lərin (məsələn, Visual Studio Code) daha yaxşı tamamlanma, səhv tapma və refaktorinq dəstəyi təqdim etməsini təmin edir.
 //? 4. **Böyük Kod Bazaları Üçün Daha Uyğundur**: TypeScript, böyük layihələrdə kodun idarə olunmasını asanlaşdırır, çünki yazılmış hər bir dəyişən və funksiya tipi müəyyən edilmişdir.
 
@@ -41,13 +41,18 @@ console.log(greet("John")); //Hello, John
 //* **TypeScript Compiler-in Quraşdırılması**:
 ```
   npm install -g typescript
+
+  npm init
+  npm install --save-dev ts-node
+  npm i typescript --save-dev
+  npx tsc --init
+  npx tsc index.ts
 ```;
 
 //? Yuxarıdakı əmrlə TypeScript quraşdırıldıqdan sonra, .ts uzantılı faylları yaratmağa başlaya bilərsiniz. //? TypeScript Faylının Transpiles Edilməsi: TypeScript faylını JavaScript-ə çevirmək üçün aşağıdakı əmrdən istifadə edə bilərsiniz:
 
-//* tsc app.ts
-
-//? Bu əmr, app.ts faylını JavaScript faylına çevirəcək və app.js faylını yaradacaq. //? TypeScript yazdıqca IDE-niz səhvləri anında göstərəcəkdir və bu da kodun daha sürətli inkişafına kömək edəcəkdir.
+//? Bu əmr, app.ts faylını JavaScript faylına çevirəcək və app.js faylını yaradacaq.
+//? TypeScript yazdıqca IDE-niz səhvləri anında göstərəcəkdir və bu da kodun daha sürətli inkişafına kömək edəcəkdir.
 
 //* TypeScript-də Funksiya Tipləri: //? TypeScript-də funksiyaların parametrləri və dönüş dəyərləri üçün tiplər təyin edilə bilər. Bu, funksiyanın necə istifadə ediləcəyini və hansı verilənləri qəbul edəcəyini dəqiq göstərir.
 
@@ -55,5 +60,5 @@ console.log(greet("John")); //Hello, John
 
 console.log(add(5, 10)); //15 //? a və b yalnız number tipini qəbul edə bilər, başqa tip verilsə, TypeScript səhv göstərəcəkdir.
 
-//* Nəticə: 
+//* Nəticə:
 //? TypeScript, JavaScript-in çox faydalı və etibarlı bir uzantısıdır. Tipləri və digər inkişaf etmiş xüsusiyyətləri ilə proqramçıların səhv etməsinin qarşısını alır və daha yaxşı kod yazılmasını təmin edir. TypeScript, həmçinin böyük layihələrdə daha yaxşı idarəetmə və daha asan inkişaf təmin edir.

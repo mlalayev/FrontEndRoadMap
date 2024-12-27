@@ -1,38 +1,42 @@
-//* 46. Gün - TypeScript Sadə Tiplər
+//* 47. Gün - TypeScript Sadə Tiplər
 
 //? **TypeScript Sadə Tipləri**
 //? TypeScript, JavaScript-də olan bəzi sadə tipləri dəstəkləyir. Bu tipləri artıq tanıyırsınız.
 
 //? **Üç əsas sadə tip**:
 //? - **boolean**: true və ya false dəyərləri.
-//? - **number**: tam ədədlər və ondalıklı ədədlər.
-//? - **string**: "TypeScript Rocks" kimi mətn dəyərləri.
+//? - **number**: tam ədədlər və onluq ədədlər.
+//? - **string**: "TypeScript" kimi mətn dəyərləri.
 
 //? **Daha az yayılmış iki sadə tip**:
-//? - **bigint**: Tam ədədlər və ondalıklı ədədlər, lakin **number** tipindən daha böyük müsbət və mənfi ədədlərə imkan verir.
+//? - **bigint**: Tam ədədlər və onluq ədədlər, lakin **number** tipindən daha böyük müsbət və mənfi ədədlərə imkan verir.
 //? - **symbol**: Qlobal olaraq unikaldır və identifikator yaratmaq üçün istifadə olunur.
 
 //* **Tip Təyini**
 //? Bir dəyişən yaradarkən, TypeScript tipini iki əsas şəkildə təyin edir:
 
 //? - **Explicit (Aydın)**
-//? - **Implicit (İmplikit)**
+//? - **Implicit (İmplisit)**
 
 //* **Aydın Tip Təyini**:
 //? Tipi açıq şəkildə yazmaq:
-//* ```typescript
+// ```
+
 // let firstName: string = "Dylan";
+
 // ```
 
 //? **Aydın tip təyini** oxunması daha asandır və məqsədli şəkildə tip müəyyən edir.
 
-//* **İmplikit Tip Təyini**:
-//? TypeScript, dəyişənin təyin olunan dəyərinə əsasən tipi "tahmin" edəcək:
-//* ```typescript
+//* **İmplisit Tip Təyini**:
+//? TypeScript, dəyişənin təyin olunan dəyərinə əsasən tipi "təxmin" edəcək:
+//```
+
 // let firstName = "Dylan"; // TypeScript avtomatik olaraq "string" tipi təyin edir.
+
 // ```
 
-//? **İmplikit tip təyini** TypeScript-ə tipi çıxarmağa məcbur edir.
+//? **İmplisit tip təyini** TypeScript-ə tipi çıxarmağa məcbur edir.
 //? Tip təyini daha qısa və sürətli olur, inkişaf və test prosesində çox istifadə olunur.
 
 //* **Tip Təyini Xətası**:

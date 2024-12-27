@@ -25,7 +25,7 @@
 //? Şərt doğrulursa, `if` blokundakı əməliyyat icra olunur; əks halda, blok atlanır.
 
 //* **Sintaksis**:
-//* if (şərt) { əməl; } 
+//* if (şərt) { əməl; }
 
 //? **Nümunə**: Əgər `x` 10-dan böyükdürsə, ekrana "Böyük ədəd" yazdırmaq:
 `let x = 15;
