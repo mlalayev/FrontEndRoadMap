@@ -1,6 +1,6 @@
 //* 18. Gün - JavaScript Arrays, 2D Arrays və 3D Arrays
 
-//? **Array (Dizi) Nədir?**
+//? **Array (Massiv) Nədir?**
 //? Array, birdən çox dəyəri bir arada saxlamağa imkan verən bir JavaScript məlumat strukturudur.
 //? Hər bir elementə indeks vasitəsilə daxil olmaq mümkündür və indekslər 0-dan başlayır.
 
@@ -9,7 +9,7 @@
 
 //? **Nümunə**: Sadə bir array yaratmaq:
 let fruits = ["alma", "banan", "kivi", "portağal"];
-console.log(fruits[0]);  //? "alma" ekrana yazılacaq
+console.log(`fruits[0]`);  //? "alma" ekrana yazılacaq
 
 //? **Array-lara Dəyər Təyin Etmək və Göstərmək**
 //? Array-lara dəyər təyin etmək üçün indekslərdən istifadə edirik.
@@ -26,7 +26,7 @@ console.log(fruits[4]);  //? "nar" ekrana yazılacaq
 console.log(fruits.length);  //? Array-ın uzunluğu: 5
 
 
-//? **2D Array (İki Ölçülü Dizi) Nədir?**
+//? **2D Array (İki Ölçülü Massiv) Nədir?**
 //? 2D array, array içində başqa array-ları saxlayan bir array-dir.
 //? Bu, tablolarda olduğu kimi satır və sütunları təmsil edə bilər.
 

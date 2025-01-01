@@ -67,5 +67,5 @@
 //? Bu davranış, `tsconfig.json` faylında `noImplicitAny` seçimi ilə deaktiv edilə bilər. `tsconfig.json`, TypeScript layihəsində bəzi parametrləri tənzimləmək üçün istifadə olunur.
 
 //? **Boolean və Boolean Tipi**:
-//? **boolean** kiçik hərflə yazılır, lakin **Boolean** böyük hərflə yazılır və yalnız çox spesifik hallar üçün istifadə edilir.
-//? Bu dərs üçün sadəcə kiçik hərflə yazmağa diqqət edin. Böyük hərflə yazılmış tiplər xüsusi hallarda istifadə olunur.
+//? Boolean yalnız çox spesifik hallar üçün istifadə edilir.
+//? Kiçik hərflə yazmağa diqqət edin. Böyük hərflə yazılmış tiplər xüsusi hallarda istifadə olunur.

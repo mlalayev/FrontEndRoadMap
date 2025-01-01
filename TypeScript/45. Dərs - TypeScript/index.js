@@ -41,7 +41,6 @@ console.log(greet("John")); //Hello, John
 //* **TypeScript Compiler-in Quraşdırılması**:
 ```
   npm install -g typescript
-
   npm init
   npm install --save-dev ts-node
   npm i typescript --save-dev
