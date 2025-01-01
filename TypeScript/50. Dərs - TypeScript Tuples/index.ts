@@ -50,7 +50,7 @@ console.log(`X: ${graphPoint[0]}, Y: ${graphPoint[1]}`);
 
 const position: [number, number] = [100, 200];
 const [x1, y1] = position;
-console.log(`X koordinatı: ${x}, Y koordinatı: ${y}`);
+// console.log(`X koordinatı: ${x}, Y koordinatı: ${y}`);
 
 //* **7. Tuple ilə Funksiyalar**
 //? Tuple-lər funksiyalarda həm giriş, həm də çıxış tipi kimi istifadə edilə bilər.
@@ -93,4 +93,3 @@ students.forEach(([name, [score, passed]]) => {
   console.log(`${name}: Bal - ${score}, Keçdi - ${passed}`);
 });
 
-//todo Bu geniş izahat və nümunələr tələbələrinizə Tuple-lərin necə işlədiyini və onları necə tətbiq edə biləcəklərini aydınlaşdıracaq. İstənilən əlavə sual üçün müraciət edə bilərsiniz!
