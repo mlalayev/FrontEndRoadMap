@@ -24,6 +24,6 @@
 
 //todo 13. İki parametr qəbul edən bir funksiya yaradın: biri string massiv, digəri string. String massivdə stringin neçə dəfə təkrarlandığını tapsın.
 
-//todo 14. Verilən bir arraydəki stringləri uzunluqlarına görə azalan sıraya düzən bir funksiya yaradın.
+//todo 14. Bir funksiya yaradın ki, string qəbul etsin və içindəki hərfləri alfabetik sıraya görə düzərək qaytarsın.
 
-//todo 15. Bir funksiya yaradın ki, string qəbul etsin və içindəki hərfləri alfabetik sıraya görə düzərək qaytarsın.
+//todo 15. Verilən bir arraydəki stringləri uzunluqlarına görə azalan sıraya düzən bir funksiya yaradın.
