@@ -1,29 +1,29 @@
-//todo 1. Sadə bir funksiya yazın: İki rəqəmi toplayıb qaytaran bir funksiya yaradın.
+//todo 1. Bir funksiya yaradın ki, bir adamın adını və neçə dəfə təkrarlanacağını qəbul edib konsola həmin adı təkrarlasın.
 
-//todo 2. Rəqəmlərdən ibarət bir massiv yaradın və konsola yazdırın.
+//todo 2. Bir funksiya yaradın ki, verilən stringin içində neçə sait hərf olduğunu tapsın.
 
-//todo 3. Bir funksiya yazın ki, massivdəki maksimum dəyəri tapsın.
+//todo 3. Bir funksiya yaradın ki, bir array qəbul etsin və yalnız string tipli elementləri qaytarsın.
 
-//todo 4. Boolean qaytaran bir funksiya yaradın: Verilən rəqəmin cüt olub-olmadığını yoxlayın.
+//todo 4. Verilən bir adın uzunluğunun cüt və ya tək olduğunu qaytaran bir funksiya yaradın.
 
-//todo 5. Bir massivdəki bütün rəqəmlərin cəmini qaytaran funksiya yaradın.
+//todo 5. Bir funksiya yaradın ki, string qəbul edib ilk hərfini böyük, digərlərini kiçik qaytarsın.
 
-//todo 6. undefined tipində dəyişən yaradın və konsola yazdırın.
+//todo 6. Verilən bir massivdə stringlərin uzunluqlarının cəmini qaytaran bir funksiya yaradın.
 
-//todo 7. null tipində dəyişən yaradın və onun tipini konsola yazdırın.
+//todo 7. İki parametr qəbul edən bir funksiya yaradın: biri string, digəri rəqəm. Stringi verilən rəqəm qədər tərsinə çevirib konsola yazsın.
 
-//todo 8. Massivin uzunluğunu qaytaran bir funksiya yaradın.
+//todo 8. Bir funksiya yaradın ki, parametr olaraq bir array qəbul etsin və yalnız null və undefined dəyərləri silinmiş bir array qaytarsın.
 
-//todo 9. Bir massivdəki bütün cüt rəqəmləri qaytaran bir funksiya yaradın.
+//todo 9. İki parametr qəbul edən bir funksiya yaradın: biri string, digəri boolean. Boolean true olarsa stringi böyük hərflə, false olarsa kiçik hərflə qaytarsın.
 
-//todo 10. Rəqəm tipindən boolean tipinə çevrilmə edən bir funksiya yaradın.
+//todo 10. Bir funksiya yaradın ki, parametr olaraq bir adam adı və doğum ilini qəbul etsin, yaşını qaytarsın.
 
-//todo 11. Verilən massivdəki rəqəmlərin ortalama dəyərini qaytaran funksiya yaradın.
+//todo 11. Bir funksiya yaradın ki, bir string qəbul etsin və həmin stringdə təkrarlanan hərflərin sayını tapsın.
 
-//todo 12. Verilən rəqəmləri azalan sıraya görə sıralayan bir funksiya yaradın.
+//todo 12. Bir funksiya yaradın ki, parametr olaraq bir massiv qəbul etsin və yalnız boolean dəyərləri qaytarsın.
 
-//todo 13. Massivin içindəki rəqəmlərdən hər hansı birinin 5-ə bərabər olub-olmadığını yoxlayan funksiya yaradın.
+//todo 13. İki parametr qəbul edən bir funksiya yaradın: biri string massiv, digəri string. String massivdə stringin neçə dəfə təkrarlandığını tapsın.
 
-//todo 14. Verilən rəqəmin müsbət, mənfi və ya sıfır olduğunu müəyyən edən bir funksiya yaradın.
+//todo 14. Verilən bir arraydəki stringləri uzunluqlarına görə azalan sıraya düzən bir funksiya yaradın.
 
-//todo 15. Massivin içindəki unikal rəqəmləri qaytaran bir funksiya yaradın.
+//todo 15. Bir funksiya yaradın ki, string qəbul etsin və içindəki hərfləri alfabetik sıraya görə düzərək qaytarsın.

@@ -2,30 +2,29 @@
 
 //? **TypeScript Compiler-i**
 //? TypeScript, JavaScript-ə çevrilmək üçün bir kompilyatordan istifadə edir.
-//? TypeScript kodunun transpiles edilməsi (JavaScript-ə çevrilməsi) onu JavaScript-in işlədiyi hər yerdə işlətmək imkanı verir.
+//? TypeScript kodunun transpile edilməsi (JavaScript-ə çevrilməsi) onu JavaScript-in işlədiyi hər yerdə işlətmək imkanı verir.
 
 //* **Kompilyatorun Qurulması**:
 //? TypeScript-in rəsmi kompilyatoru `npm` vasitəsilə qurula bilər.
-//? `npm` haqqında daha ətraflı məlumatı burada tapa bilərsiniz: [What is npm?](https://www.npmjs.com/)
-//? Npm layihəniz daxilində aşağıdakı əmri işlədərək kompilyatoru quraşdıra bilərsiniz:
+//? Npm layihəniz daxilində aşağıdakı kodu işlədərək kompilyatoru quraşdıra bilərsiniz:
 
 //* `npm install typescript --save-dev`
 
-//? Bu əmrdən sonra aşağıdakı kimi bir nəticə görəcəksiniz:
+//? Bu koddan sonra aşağıdakı kimi bir nəticə görəcəksiniz:
 
 //* ```
 //* added 1 package, and audited 2 packages in 2s
 //* found 0 vulnerabilities
 //* ```
 
-//? Kompilyator `node_modules` qovluğuna quraşdırılacaq və `npx tsc` əmri ilə işlədilə bilər.
+//? Kompilyator `node_modules` qovluğuna quraşdırılacaq və `npx tsc` kodu ilə işlədilə bilər.
 
 //* **Kompilyatorun İstifadəsi**:
-//? Kompilyatoru işə salmaq üçün aşağıdakı əmri işlədin:
+//? Kompilyatoru işə salmaq üçün aşağıdakı kodu işlədin:
 
 //* `npx tsc`
 
-//? Bu əmr ilə aşağıdakı kimi bir nəticə görəcəksiniz:
+//? Bu kod ilə aşağıdakı kimi bir nəticə görəcəksiniz:
 
 //* ```
 //* Version 4.5.5
@@ -38,7 +37,7 @@
 //? By default, TypeScript kompilyatoru boş bir layihə içində işlədildikdə yardım mesajı göstərir.
 //? Kompilyatoru konfiqurasiya etmək üçün `tsconfig.json` faylından istifadə edə bilərsiniz.
 
-//? `tsconfig.json` faylını yaratmaq üçün aşağıdakı əmri işlədin:
+//? `tsconfig.json` faylını yaratmaq üçün aşağıdakı kodu işlədin:
 
 //* `npx tsc --init`
 

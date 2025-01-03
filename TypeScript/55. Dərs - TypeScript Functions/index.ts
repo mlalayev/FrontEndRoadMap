@@ -67,13 +67,7 @@ function pow(value: number, exponent: number = 10): number {
 //? Bu, parametrlərin sırasının əhəmiyyətini azaldır və onları daha asan başa düşülən edir.
 
 //? `divide` funksiyasının daxilində, `dividend` və `divisor` parametrləri obyekt şəklində göstərilir
-function divide({
-  dividend,
-  divisor,
-}: {
-  dividend: number;
-  divisor: number;
-}): number {
+function divide({dividend,divisor,}: {dividend: number;  divisor: number;}): number {
   //? Parametrlər adlandırılıb
   return dividend / divisor; //? `dividend`-i `divisor`-a bölür
 }
