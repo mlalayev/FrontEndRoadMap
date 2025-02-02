@@ -5,15 +5,7 @@
 //* **1. `call()` metodu**
 //? `call()` metodu, bir funksiyanı çağırarkən onun `this` kontekstini təyin etməyə imkan verir. Bu metodda, funksiya birbaşa çağırılır və ona argumentlər nöqtə ilə verilir. `call()` metodu ilə funksiyanı dərhal işə sala bilərsiniz.
 
-function greet(name, age) {
-  console.log(`Hello, my name is ${name} and I am ${age} years old.`);
-}
-
-const person = {
-  name: "Murad",
-  age: 30,
-};
-
+names
 // `greet` funksiyasını `person` obyekti ilə çağırırıq
 greet.call(person, person.name, person.age); //? Output: Hello, my name is Murad and I am 30 years old.
 

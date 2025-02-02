@@ -27,3 +27,11 @@
 //todo 14. İki parametr qəbul edən bir funksiya yaradın: biri string massiv, digəri string. String massivdə stringin neçə dəfə təkrarlandığını tapsın.
 
 //todo 15. Verilən bir arraydəki stringləri uzunluqlarına görə azalan sıraya düzən bir funksiya yaradın.
+
+//todo 16. Bir funksiya yaradın ki, iki obyekt qəbul etsin və onları birləşdirib yeni obyekt qaytarsın.
+
+//todo 17. Bir funksiya yaradın ki, obyekt qəbul edib yalnız dəyərləri string olan yeni obyekt qaytarsın.
+
+//todo 18. Bir funksiya yaradın ki, obyektin dəyərləri arasında verilən dəyərin olub-olmadığını yoxlasın və nəticəni qaytarsın.
+
+//todo 19. Bir funksiya yaradın ki, obyektin hər bir dəyərinə 2 əlavə edib yeni obyekt qaytarsın (yalnız rəqəmlərdirsə).

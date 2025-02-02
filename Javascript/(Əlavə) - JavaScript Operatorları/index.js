@@ -16,7 +16,7 @@ console.log(a - b); //* Çıxma: 5
 console.log(a * b); //* Vurma: 50
 console.log(a / b); //* Bölmə: 2
 console.log(a % b); //* Qalıq (modulus): 0
-console.log(a ** 2); //* Üstə qaldırma: 10^2 = 100
+console.log(a ** 2); //* Kvadrat: 10^2 = 100
 
 //? **Artırma və Azaltma Operatorları**
 let c = 1;
