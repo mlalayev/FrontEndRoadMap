@@ -142,6 +142,27 @@ bike1.displayInfo();
 //? "Bu, Yamaha R1-dir."
 //? "Motor növü: Inline-4"
 
+
+
+
+//* **7. Method Overloading (Metodun Aşırı Yüklənməsi)**
+//? JavaScript-də eyni adlı metodları bir neçə dəfə təyin etmək mümkün deyil, çünki sonuncu versiya əvvəlkiləri əvəz edir.
+//? Lakin, metodun aldığı arqumentlərin sayını yoxlayaraq overloading tətbiq etmək mümkündür.
+
+class MathOperations {
+    multiply(a, b, c) {
+        if (c !== undefined) {
+            return a * b * c;
+        }
+        return a * b;
+    }
+}
+
+const math = new MathOperations();
+console.log(math.multiply(2, 3));      //? 6
+console.log(math.multiply(2, 3, 4));   //? 24
+
+
 //? **6. Nə üçün İrsiyyət istifadə edirik?**
 //? - **Kodun Təkrarlanmasını Azaltmaq**: Bir çox oxşar xüsusiyyət və metodları bir yerdə təyin edib, siniflər arasında irsiyyət vasitəsilə paylaşmaq mümkündür.
 //? - **Modelləşdirmə**: İrsiyyət, həyatdakı təbii əlaqələri modelləşdirməyə kömək edir. Məsələn, `Person` sinifindən `Programmer`, `Manager` kimi alt siniflər yaradıla bilər.

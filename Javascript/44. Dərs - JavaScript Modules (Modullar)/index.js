@@ -109,3 +109,6 @@ sayHello(); //? "Hello, Murad"
 //* **Xülasə:**
 //? JavaScript modulları, kodu daha idarəedilən və yenidən istifadə oluna bilən etmək üçün güclü vasitədir. `export` və `import` ilə modulların istifadəsi layihələrin daha asan inkişaf etdirilməsini və idarə olunmasını təmin edir.
 //? Bu yanaşma kodun sadələşdirilməsinə, genişlənməsinə və asanlıqla saxlanmasına kömək edir.
+
+
+

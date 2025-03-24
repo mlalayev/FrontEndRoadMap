@@ -51,7 +51,7 @@ const doSomething1 = (callback) => {
 };
 
 doSomething((err, result) => {
-  if (err) {
+  if (err == true) {
     return console.log(err);
   }
   return console.log(result);
@@ -65,6 +65,7 @@ doSomething((err, result) => {
 
 const promise = new Promise((resolve, reject) => {
   resolve("uğur");
+  resolve("salam");
   reject("uğursuzluq");
 });
 
@@ -99,9 +100,7 @@ const doPromise1 = new Promise((resolve, reject) => {
 });
 
 doPromise
-  .then((result) => {
-    console.log(result);
-  })
+  .then((result) => console.log(result))
   .catch((error) => console.error(error));
 // Nəsə səhv olub
 
@@ -111,10 +110,7 @@ doPromise
 const url = "https://restcountries.com/v2/all"; // ölkələr API-si
 fetch(url)
   .then((response) => response.json()) // API məlumatlarını JSON olaraq əldə etmək
-  .then((data) => {
-    // məlumatı əldə edirik
-    console.log(data);
-  })
+  .then((data) => console.log(data))
   .catch((error) => console.error(error)); // əgər nəsə səhv olsa, səhvi idarə edirik
 
 // Async və Await
@@ -144,9 +140,7 @@ console.log(value);
 const url1 = "https://restcountries.com/v2/all";
 fetch(url1)
   .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
-  })
+  .then((data) => console.log(data))
   .catch((error) => console.error(error));
 
 // async və await

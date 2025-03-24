@@ -49,7 +49,7 @@ console.log([...myMap.keys()]); //? ['name', 1, true]
 console.log([...myMap.values()]); //? ['John', 'one', 'isTrue']
 
 // Map-də açar-qiymət cütlərini əldə etmək
-console.log([...myMap.entries()]); //? [['name', 'John'], [1, 'one'], [true, 'isTrue']]
+console.log([...myMap.entries()]); //? [['name', 'John'],  [true, 'isTrue']]
 
 // Bütün Map-i iterasiya etmək
 for (const [key, value] of myMap) {
@@ -196,7 +196,7 @@ const companies1 = ["Google", "Facebook", "Amazon", "Oracle", "Microsoft"];
 setOfCompanies = new Set();
 for (const company of companies) {
   setOfCompanies.add(company);
-}
+}   
 console.log(setOfCompanies); // Set(5) {"Google", "Facebook", "Amazon", "Oracle", "Microsoft"}
 
 // Set-dən element silmək
