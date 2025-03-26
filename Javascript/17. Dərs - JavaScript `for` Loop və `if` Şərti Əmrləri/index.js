@@ -10,9 +10,11 @@
 //* for (başlanğıc dəyəri; şərt; artırma/azaltma) { əməl; }
 
 //? **Nümunə**: 1-dən 5-ə qədər olan ədədləri ekranda göstərmək:
-`for (let i = 1; i <= 5; i++) {   //? i = 1 ilə başlayır, i 5-ə qədər artır.
+`
+for (let i = 1; i <= 5; i++) {   //? i = 1 ilə başlayır, i 5-ə qədər artır.
     console.log(i);  //? Ekrana 1, 2, 3, 4, 5 yazılacaq.
-}`
+}
+`
 
 //? **Açıqlama**:
 //? 1. `let i = 1;` - Dövrün başlanğıc dəyəri, burada i = 1 olaraq təyin olunur.

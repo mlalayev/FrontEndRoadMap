@@ -6,6 +6,7 @@
 //? Object-lər, müxtəlif məlumat növlərini bir yerə toplamaq və təşkil etmək üçün istifadə olunur.
 //? Objektin hər bir xüsusiyyəti bir **key** (açar) və ona uyğun olan **value** (dəyər) ilə müəyyən edilir.
 
+
 //* **Sintaksis**:
 //? Object yaratmaq üçün aşağıdakı sintaksis istifadə edilir:
 //* let person = {
@@ -17,13 +18,14 @@
 //* **Nümunə**:
 //? Bir şəxs haqqında məlumatları saxlayan bir obyekt yaratmaq:
 let person = {
-    firstName: "Əli",  //? Key: firstName, Value: "Əli"
-    lastName: "Məmmədov",  //? Key: lastName, Value: "Məmmədov"
-    age: 30,  //? Key: age, Value: 30
-    isStudent: false,  //? Key: isStudent, Value: false
-    greet: function() {  //? Bu, bir method-dur (funksiya), person obyektinə aid
-        console.log("Salam, mənim adım " + this.firstName + " " + this.lastName);
-    }
+  firstName: "Əli", //? Key: firstName, Value: "Əli"
+  lastName: "Məmmədov", //? Key: lastName, Value: "Məmmədov"
+  age: 30, //? Key: age, Value: 30
+  isStudent: false, //? Key: isStudent, Value: false
+  greet: function () {
+    //? Bu, bir method-dur (funksiya), person obyektinə aid
+    console.log("Salam, mənim adım " + this.firstName + " " + this.lastName);
+  },
 };
 
 //* **Object-in Xüsusiyyətlərinə Giriş və Çıxış**:
@@ -60,7 +62,6 @@ let person = {
 //* Bu nümunədə bir işçi obyektinin daxilində həmçinin başqa bir obyekt (`address`) də saxlanılır.
 //* Bu üsulla əlaqəli məlumatları bir yerdə saxlamaq mümkündür.
 
-
 //? **Obyektlər və Dinamik Məlumat Təşkili**:
 //? Obyektlər çox güclü və çevikdir. Biz onlara yeni keylər əlavə edə bilərik və ya mövcud keyləri dəyişdirə bilərik.
 //* person.city = "Bakı";  //? Yeni key əlavə edirik
@@ -68,8 +69,8 @@ let person = {
 
 //? **Obyektdə Mövcud Keyin Dəyişdirilməsi**:
 //? Məsələn, obyektin yaşını dəyişdirmək:
-person.age = 35;  //? Yaşını yeniləyirik
-console.log(person.age);  //? 35
+person.age = 35; //? Yaşını yeniləyirik
+console.log(person.age); //? 35
 
 //? **Obyektdən Xüsusiyyət Silmək**:
 //? Həmçinin obyektin içindən müəyyən bir xüsusiyyəti silmək də mümkündür:
@@ -82,42 +83,42 @@ console.log(person.age);  //? 35
 //* **Nümunə: 2D Object**:
 //? Təsəvvür edək ki, iki tələbə haqqında məlumatı saxlayan obyektimiz var:
 let students = {
-    student1: {
-        name: "Əli",
-        age: 20,
-        grade: "A"
-    },
-    student2: {
-        name: "Leyla",
-        age: 22,
-        grade: "B"
-    }
+  student1: {
+    name: "Əli",
+    age: 20,
+    grade: "A",
+  },
+  student2: {
+    name: "Leyla",
+    age: 22,
+    grade: "B",
+  },
 };
 
-console.log(students.student1.name);  //? "Əli"
+console.log(students.student1.name); //? "Əli"
 
 //* **Nümunə: 3D Object**:
 //? Təsəvvür edək ki, üç ölçülü obyekt (3D) yaradırıq:
 let locations = {
-    city1: {
-        country: "Azərbaycan",
-        city: "Bakı",
-        landmarks: {
-            place1: "İçəri Şəhər",
-            place2: "Qız Qalası"
-        }
+  city1: {
+    country: "Azərbaycan",
+    city: "Bakı",
+    landmarks: {
+      place1: "İçəri Şəhər",
+      place2: "Qız Qalası",
     },
-    city2: {
-        country: "Türkiyə",
-        city: "İstanbul",
-        landmarks: {
-            place1: "Aya Sofya",
-            place2: "Topkapı Sarayı"
-        }
-    }
+  },
+  city2: {
+    country: "Türkiyə",
+    city: "İstanbul",
+    landmarks: {
+      place1: "Aya Sofya",
+      place2: "Topkapı Sarayı",
+    },
+  },
 };
 
-console.log(locations.city1.landmarks.place1);  //? "İçəri Şəhər"
+console.log(locations.city1.landmarks.place1); //? "İçəri Şəhər"
 
 //? **Obyektdən Məlumat Çıxarmaq və Manipulyasiya Etmək**:
 //? Obyektlərdə məlumatı manipulyasiya edərək müxtəlif əməliyyatlar aparmaq mümkündür. Bu xüsusiyyətləri istifadə edərək məlumatları asanlıqla təşkil edə və istədiyiniz kimi çıxara bilərsiniz.

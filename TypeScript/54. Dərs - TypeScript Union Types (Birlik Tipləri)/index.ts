@@ -1,3 +1,4 @@
+
 //* TypeScript-də Union Tipləri (Birlik Tipləri)
 //? Union tipləri bir dəyərin bir neçə tipdən biri ola biləcəyi hallarda istifadə olunur.
 //? Məsələn, bir əmlak (property) həm `string`, həm də `number` ola bilər.
