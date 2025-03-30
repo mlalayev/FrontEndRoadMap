@@ -70,13 +70,13 @@ console.log(str4.trim()); //? "Hello World!"
 //* **12. `split()`**
 //? Verilən ayrıcıya əsasən mətni ayırır və massiv qaytarır.
 //? **Nümunə:**
-let str5 = "apple,banana,orange";
-console.log(str5.split(",")); //? ["apple", "banana", "orange"]
+let str5 = "apple banana orange";
+console.log(str5.split()); //? ["apple", "banana", "orange"]
 
 //* **13. `replace()`**
 //? Verilən mətni yeni bir mətnlə əvəz edir (ilk uyğunluğu dəyişir).
 //? **Nümunə:**
-let str6 = "I like JavaScript";
+let str6 = "I like JavaScript, JavaScript";
 console.log(str6.replace("JavaScript", "Python")); //? "I like Python"
 
 //* **14. `replaceAll()`**
