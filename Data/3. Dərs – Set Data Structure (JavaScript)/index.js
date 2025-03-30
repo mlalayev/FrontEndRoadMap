@@ -67,5 +67,3 @@ console.log(uniqueLetters("muradlalayev")); //? "muradlyev"
 
 //? Nəticə: Set JavaScript-də sadə, amma çox güclü data structure-dir.
 //? Unikal məlumatı idarə etmək, təkrarı önləmək və axtarışı sürətli etmək üçün mükəmməldir.
-
-//? Gələn dərsdə: Map – key/value strukturlu data structure ilə tanış olacağıq.F
