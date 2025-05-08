@@ -104,6 +104,7 @@ console.log(mySet.has(3)); //? false
 // Set ölçüsünü öyrənmək
 console.log(mySet.size); //? 2 (3 silindikdən sonra ölçü)
 
+
 // Set üzərində iterasiya
 mySet.forEach((value) => console.log(value));
 //? Output:

@@ -4,7 +4,7 @@
 //? **Document Object Model (DOM)**, veb səhifələri ilə işləmək üçün bir proqramlaşdırma interfeysidir.
 //? DOM, HTML və XML sənədlərinin strukturunu, məzmununu və tərzini təmsil edir və onlarla əlaqə saxlamağa imkan verir.
 //? DOM, HTML sənədini bir ağac (tree) formasında təmsil edir, hər bir element bir "düyün" (node) kimi təmsil olunur.
-//? DOM ilə səhifədəki mətnlər, şəkillər, linklər, formalar və daha çoxu ilə dinamik şəkildə işləyə bilərik.
+//? DOM ilə səhifədəki mətnlər, şəkillər, linklər, formlar və daha çoxu ilə dinamik şəkildə işləyə bilərik.
 
 //* **DOM-da Əsas Girişlər və Əlavə Metodlar:**
 
@@ -14,6 +14,7 @@
  * ? `window`, bütün brauzer pəncərəsini təmsil edir və səhifə ilə əlaqəli müxtəlif metodları və xüsusiyyətləri təmin edir.
  * ? Məsələn, DOM metodları `window.document` vasitəsilə istifadə edilə bilər.
  */
+
 
 //* console.log(window);  //? Global window obyektini çap edir
 

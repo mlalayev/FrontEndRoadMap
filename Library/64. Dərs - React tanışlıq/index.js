@@ -12,13 +12,12 @@
 //? React komponentləri yaratmaq üçün React kitabxanasını əlavə edirik.
 //? ReactDOM isə bu komponentləri HTML DOM (Document Object Model)-a daxil etmək üçün istifadə olunur.
 
-import React from 'react'; // React kitabxanasını daxil edirik.
-import ReactDOM from 'react-dom/client'; // ReactDOM kitabxanasını daxil edirik.
+import React from "react"; // React kitabxanasını daxil edirik.
+import ReactDOM from "react-dom/client"; // ReactDOM kitabxanasını daxil edirik.
 
 //* Sadə bir React komponenti yaradaq:
 //? React komponentləri funksiya və ya siniflər kimi yaradılır.
 //? Burada sadə bir funksiya komponenti nümunə olaraq yaradılır:
-
 
 function Hello(props) {
   //? Bu komponent HTML sətiri qaytarır: "Hello World!"
@@ -35,7 +34,7 @@ const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
 
 //? Nəhayət, yaradılan "Hello" komponentimizi bu konteynerə render edirik:
-root.render(<Hello />); 
+root.render(<Hello />);
 //? Burada `<Hello />` React komponentidir və o, ekranda "Hello World!" yazısını göstərir.
 
 //* JSX (JavaScript XML) nədir?
@@ -53,7 +52,6 @@ root.render(<Hello />);
 //? - React komponentlərini digər komponentlərin içində istifadə edə bilərsiniz.
 //? - React layihənizdə tətbiqi inkişaf etdirmək üçün əlavə kitabxanalardan istifadə edə bilərsiniz, məsələn: React Router, Redux və s.
 
-
 //* React Tətbiqi Yaratmaq üçün Mühit Qurulması
 //? React-i öyrənmək və test etmək üçün kompüterinizdə React mühiti qurmalısınız.
 //? Bu dərslikdə React tətbiqləri yaratmaq üçün rəsmi dəstəkli "create-react-app" vasitəsindən istifadə edirik.
@@ -66,7 +64,7 @@ root.render(<Hello />);
 //* React Tətbiqi Necə Yaradılır?
 //? Kompüterinizdə terminalı açın və tətbiqinizi yaratmaq istədiyiniz qovluğa keçin.
 //? Aşağıdakı əmri icra edin:
-// npx create-react-app my-react-app 
+// npx create-react-app my-react-app
 //? Bu əmr "my-react-app" adlı yeni bir React tətbiqi yaradacaq.
 //? create-react-app bütün lazımi faylları və konfiqurasiyaları avtomatik olaraq quracaq.
 
@@ -77,9 +75,9 @@ root.render(<Hello />);
 
 //* React Tətbiqini İşə Salmaq
 //? Tətbiqin yaradıldığı qovluğa keçmək üçün bu əmri icra edin:
-// cd my-react-app 
+// cd my-react-app
 //? React tətbiqini başlatmaq üçün isə aşağıdakı əmrdən istifadə edin:
-// npm start 
+// npm start
 //? Bu əmr tətbiqinizi işə salacaq və brauzerinizdə yeni bir pəncərə açılacaq.
 //? Əgər brauzer avtomatik açılmasa, `localhost:3000` ünvanını əl ilə daxil edin.
 
@@ -107,7 +105,6 @@ root.render(<Hello />);
 //* Nəticə:
 //? Bu dərs, React mühitini qurmaq və ilk tətbiqinizi yaratmaq üçün lazım olan əsas addımları izah edir.
 //? İrəlidə daha mürəkkəb mövzulara keçərək React-i dərinliklə öyrənəcəyik.
-
 
 //* React ilə Tanışlıq - Nədir və Necə İşləyir?
 //* React nədir?

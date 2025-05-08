@@ -9,7 +9,9 @@
 //? - **Optimal Həll Seçimi:** Eyni problemi həll edən bir neçə algoritm arasından ən səmərəlisini seçməyə imkan yarıdır.
 //? - **Böyük Miqyasda Uygunluq:** Məlumatlar artdıqca algoritmin performansını qoruyub saxlaması önəmlidir.
 
-//* **1. Big O Notasiyası**
+
+
+//* **1. Big O Notasiyası** 
 //? Big O, algoritmin çalışma vaxtını və ya yaddaş istifadəsini asimptotik olaraq qiymətləndirən bir metoddur.
 //? Yəni, giriş verilənləri n artdıqda, algoritmin nə qədər sürətdə işlədiyini təyin edir.
 
@@ -19,6 +21,16 @@
 //? - **O(n) - Xətti vaxt**: Algoritmin vaxtı girişin ölçüsünə görə düz mütənasib artır.
 //? - **O(n^2) - Kvadratik vaxt**: Məlumat iki qat artsa, vaxt dörd qat artar.
 //? - **O(2^n) - Eksponensial vaxt**: Hər yeni addımda sürət eksponensial artır.
+
+const arr = [11, 15, 81, 3981, 3218, 218, 921, 2198, 921, 2, 7];
+
+for (let i = 0; i < arr.length; i++) {
+  for (let j = i + 1; j < arr.length; j++) {
+    if (arr[i] + arr[j] === 9) {
+      return [i, j];
+    }
+  }
+}
 
 //* **2. Omega (Ω) Notasiyası**
 //? Omega notası, algoritmin ən yaxşı halda (best case) işləmə vaxtını göstərir.

@@ -317,12 +317,10 @@ class Car extends React.Component {
 //? **this.setState()** metodu, avtomobilin rəngini dəyişəndə komponentin yenidən render olunmasına səbəb olur.
 //? Nəticədə ekran üzərindəki məlumatlar yenilənir və rəng dəyişir.
 
-
-
-//* React Class Komponentlərinin Lifecycle (Life Cycle) 
+//* React Class Komponentlərinin Lifecycle (Life Cycle)
 //? Hər React komponentinin öz "lifecycle" (yaş dövrü) var. Komponentin həyat dövrünü izləmək və idarə etmək mümkündür.
 //? Bu dövr 3 əsas fazadan ibarətdir: **Mounting**, **Updating** və **Unmounting**.
-//? Bu dövrə əsasən, komponent DOM-a daxil edilir, yenilənir və sonda DOM-dan çıxarılır. 
+//? Bu dövrə əsasən, komponent DOM-a daxil edilir, yenilənir və sonda DOM-dan çıxarılır.
 
 //* Mounting Fazası (Mounting Phase)
 //? **Mounting**, komponentin DOM-a yerləşdirilməsi deməkdir.
@@ -338,234 +336,250 @@ class Car extends React.Component {
 
 //* Misal: **constructor()** metodunun istifadəsi
 class Header extends React.Component {
-    constructor(props) {
-      super(props); // Valideynin constructor metodunu çağırırıq
-      this.state = {favoritecolor: "red"}; // Burada başlangıçda rəng "red" olaraq təyin edirik
-    }
-    render() {
-      return (
-        <h1>My Favorite Color is {this.state.favoritecolor}</h1> /* **state** içində saxladığımız rəngi ekrana çıxarırıq */
-      );
-    }
+  constructor(props) {
+    super(props); // Valideynin constructor metodunu çağırırıq
+    this.state = { favoritecolor: "red" }; // Burada başlangıçda rəng "red" olaraq təyin edirik
   }
-  
-  const root8 = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(<Header />); // "Header" komponentini DOM-a render edirik
-  
-  //* 2. getDerivedStateFromProps() metodu
-  //? **getDerivedStateFromProps()** metodu, render edilmədən əvvəl çağırılır. Bu metodda **props**-dan istifadə edərək **state**-i yeniləyirik.
-  //? Bu metodun əsas məqsədi, **props** dəyişdikdə, **state**-in də uyğun şəkildə dəyişməsini təmin etməkdir.
-  //? Bu metod **static** olduğu üçün, burada `this` istifadə edilə bilməz. Yalnız **props** və **state**-i arqument olaraq alır.
-  
-  //* Misal: **getDerivedStateFromProps()** metodunun istifadəsi
-  class Header extends React.Component {
-    constructor(props) {
-      super(props); 
-      this.state = {favoritecolor: "red"}; // Başlangıçda rəng "red" təyin olunub
-    }
-    
-    // **getDerivedStateFromProps()** metodu, props dəyişdikdə **state**-i yeniləyir
-    static getDerivedStateFromProps(props, state) {
-      return {favoritecolor: props.favcol }; // **favcol** prop-u ilə **state**-i yeniləyirik
-    }
-  
-    render() {
-      return (
-        <h1>My Favorite Color is {this.state.favoritecolor}</h1> /* Yenilənmiş rəngi göstəririk */
-      );
-    }
+  render() {
+    return (
+      <h1>
+        My Favorite Color is {this.state.favoritecolor}
+      </h1> /* **state** içində saxladığımız rəngi ekrana çıxarırıq */
+    );
   }
-  
-  const root7 = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(<Header favcol="yellow"/>); // **favcol** prop-u vasitəsilə "yellow" rəngini ekrana çıxarırıq
-  
-  //* 3. render() metodu
-  //? **render()** metodu React komponentində mütləq şəkildə olmalı və DOM-a HTML-i çıxaracaq. 
-  //? Bu metodda JSX yazılır və HTML elementləri geri qaytarılır. Render metodu hər dəfə komponentin **state**-i dəyişdikdə və ya **props** dəyişdikdə çağırılır.
-  
-  //* Misal: Sadə bir komponentin **render()** metodunun istifadəsi
-  class Header extends React.Component {
-    render() {
-      return (
-        <h1>This is the content of the Header component</h1> /* Header komponenti */
-      );
-    }
-  }
-  
-  const root6 = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(<Header />); // Bu, sadəcə "Header" komponentini render edir
-  
-  //* 4. componentDidMount() metodu
-  //? **componentDidMount()** metodu, komponent DOM-a tam daxil olduqdan sonra çağırılır.
-  //? Bu metod əsasən API çağırışları etmək, data yükləmək və ya bir dəfəlik başqa əməliyyatlar üçün istifadə olunur.
-  
-  //* Misal: **componentDidMount()** metodunun istifadəsi
-  class Header extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {favoritecolor: "red"};
-    }
-  
-    componentDidMount() {
-      // Bu metod komponentin DOM-a əlavə olunduqdan sonra bir dəfə işləyir.
-      console.log("Component has mounted!");
-    }
-  
-    render() {
-      return (
-        <h1>My Favorite Color is {this.state.favoritecolor}</h1>
-      );
-    }
-  }
-  
-  const root5 = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(<Header />);
-  
+}
 
-  //* componentDidMount() metodu
+const root8 = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Header />); // "Header" komponentini DOM-a render edirik
+
+//* 2. getDerivedStateFromProps() metodu
+//? **getDerivedStateFromProps()** metodu, render edilmədən əvvəl çağırılır. Bu metodda **props**-dan istifadə edərək **state**-i yeniləyirik.
+//? Bu metodun əsas məqsədi, **props** dəyişdikdə, **state**-in də uyğun şəkildə dəyişməsini təmin etməkdir.
+//? Bu metod **static** olduğu üçün, burada `this` istifadə edilə bilməz. Yalnız **props** və **state**-i arqument olaraq alır.
+
+//* Misal: **getDerivedStateFromProps()** metodunun istifadəsi
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { favoritecolor: "red" }; // Başlangıçda rəng "red" təyin olunub
+  }
+
+  // **getDerivedStateFromProps()** metodu, props dəyişdikdə **state**-i yeniləyir
+  static getDerivedStateFromProps(props, state) {
+    return { favoritecolor: props.favcol }; // **favcol** prop-u ilə **state**-i yeniləyirik
+  }
+
+  render() {
+    return (
+      <h1>
+        My Favorite Color is {this.state.favoritecolor}
+      </h1> /* Yenilənmiş rəngi göstəririk */
+    );
+  }
+}
+
+const root7 = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Header favcol="yellow" />); // **favcol** prop-u vasitəsilə "yellow" rəngini ekrana çıxarırıq
+
+//* 3. render() metodu
+//? **render()** metodu React komponentində mütləq şəkildə olmalı və DOM-a HTML-i çıxaracaq.
+//? Bu metodda JSX yazılır və HTML elementləri geri qaytarılır. Render metodu hər dəfə komponentin **state**-i dəyişdikdə və ya **props** dəyişdikdə çağırılır.
+
+//* Misal: Sadə bir komponentin **render()** metodunun istifadəsi
+class Header extends React.Component {
+  render() {
+    return (
+      <h1>
+        This is the content of the Header component
+      </h1> /* Header komponenti */
+    );
+  }
+}
+
+const root6 = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Header />); // Bu, sadəcə "Header" komponentini render edir
+
+//* 4. componentDidMount() metodu
+//? **componentDidMount()** metodu, komponent DOM-a tam daxil olduqdan sonra çağırılır.
+//? Bu metod əsasən API çağırışları etmək, data yükləmək və ya bir dəfəlik başqa əməliyyatlar üçün istifadə olunur.
+
+//* Misal: **componentDidMount()** metodunun istifadəsi
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { favoritecolor: "red" };
+  }
+
+  componentDidMount() {
+    // Bu metod komponentin DOM-a əlavə olunduqdan sonra bir dəfə işləyir.
+    console.log("Component has mounted!");
+  }
+
+  render() {
+    return <h1>My Favorite Color is {this.state.favoritecolor}</h1>;
+  }
+}
+
+const root5 = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Header />);
+
+//* componentDidMount() metodu
 //? **componentDidMount()** metodu komponent render edildikdən sonra çağırılır.
 //? Bu metodda, komponent DOM-a tam olaraq yerləşdikdən sonra yerinə yetirilməsi lazım olan əməliyyatları icra edirik.
 //? Məsələn, burada biz "setTimeout" funksiyasından istifadə edərək, müəyyən bir müddət sonra rəngi dəyişdiririk.
 
 //* Misal: componentDidMount() metodunun istifadəsi
 class Header extends React.Component {
-    constructor(props) {
-      super(props); // Valideynin constructor metodunu çağırırıq
-      this.state = {favoritecolor: "red"}; // Başlangıçda rəng "red"
-    }
-  
-    // componentDidMount() metodunda rəngi dəyişirik
-    componentDidMount() {
-      setTimeout(() => {
-        this.setState({favoritecolor: "yellow"}); // Bir saniyədən sonra rəngi "yellow" edirik
-      }, 1000); // 1 saniyə gecikmə ilə rəng dəyişir
-    }
-  
-    render() {
-      return (
-        <h1>My Favorite Color is {this.state.favoritecolor}</h1> /* Hal-hazırda rəngi göstəririk */
-      );
-    }
+  constructor(props) {
+    super(props); // Valideynin constructor metodunu çağırırıq
+    this.state = { favoritecolor: "red" }; // Başlangıçda rəng "red"
   }
-  
-  const root12 = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(<Header />); // "Header" komponentini render edirik
-  
-  //* Updating Fazası (Updating Phase)
-  //? **Updating** fazası, komponentin **state** və ya **props**-unda dəyişiklik olduğu zaman baş verir. Komponent yenidən render edilir.
-  //? React, komponentin **state**-ində və ya **props**-unda dəyişiklik olduqda, komponenti yenidən render etmək üçün bir neçə metod istifadə edir.
-  //? Aşağıdakı metodlar **Updating** fazasında çağırılır:
-  //? 1. **getDerivedStateFromProps()**
-  //? 2. **shouldComponentUpdate()**
-  //? 3. **render()** (Bu metod hər zaman çağırılır)
-  //? 4. **getSnapshotBeforeUpdate()**
-  //? 5. **componentDidUpdate()**
-  
-   //* 1. getDerivedStateFromProps() metodu
-  //? **getDerivedStateFromProps()** metodu **Updating** fazasında ilk çağırılan metoddur. Bu metod, komponentin **props**-larını əsas alaraq **state**-i yeniləməyə imkan verir.
-  //? Komponentin props-u dəyişdikdə, bu metod yenilənən **state**-i qaytarmaq üçün istifadə olunur.
-  
-  //* Misal: getDerivedStateFromProps() metodu ilə rəngin dəyişməsi
-  class Header extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {favoritecolor: "red"}; // Başlangıçda rəng "red"
-    }
-  
-    // **getDerivedStateFromProps()** metodu, komponentin props-u dəyişdikdə **state**-i yeniləyir
-    static getDerivedStateFromProps(props, state) {
-      return {favoritecolor: props.favcol }; // **favcol** prop-dan istifadə edərək **state**-i yeniləyirik
-    }
-  
-    changeColor = () => {
-      this.setState({favoritecolor: "blue"}); // Burada rəngi "blue" edirik
-    }
-  
-    render() {
-      return (
-        <div>
-          <h1>My Favorite Color is {this.state.favoritecolor}</h1> {/* Yenilənmiş rəngi göstəririk */}
-          <button type="button" onClick={this.changeColor}>Change color</button> {/* Burada istifadəçi rəngi dəyişə bilər */}
-        </div>
-      );
-    }
+
+  // componentDidMount() metodunda rəngi dəyişirik
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ favoritecolor: "yellow" }); // Bir saniyədən sonra rəngi "yellow" edirik
+    }, 1000); // 1 saniyə gecikmə ilə rəng dəyişir
   }
-  
-  const root11 = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(<Header favcol="yellow" />); // **favcol** prop-u vasitəsilə "yellow" rəngini ekrana çıxarırıq
-  
-  //* 2. shouldComponentUpdate() metodu
-  //? **shouldComponentUpdate()** metodu React-a komponentin yenidən render ediləcəyi barədə məlumat verir.
-  //? Bu metodun qaytardığı **Boolean** (doğru və ya yanlış) dəyər, React-a komponenti yenidən render edib-etməyəcəyini söyləyir.
-  //? Default olaraq, bu metod **true** dəyərini qaytarır, yəni hər zaman komponent yenidən render edilir.
-  //? Əgər bu metod **false** qaytararsa, komponentin render olunması dayandırılır və yenidən render edilməyəcəkdir.
-  
-  //* Misal: **shouldComponentUpdate()** metodunun istifadəsi ilə komponentin yenidən render edilməməsi
-  class Header extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {favoritecolor: "red"}; // Başlangıçda rəng "red"
-    }
-  
-    // **shouldComponentUpdate()** metodu "false" qaytararsa, render edilməyəcək
-    shouldComponentUpdate() {
-      return false; // Burada "false" qaytarırıq, yəni komponentin yenidən render olunmasını dayandırırıq
-    }
-  
-    changeColor = () => {
-      this.setState({favoritecolor: "blue"}); // Rəngi dəyişsə də, render edilmir
-    }
-  
-    render() {
-      return (
-        <div>
-          <h1>My Favorite Color is {this.state.favoritecolor}</h1> {/* Bu rəng dəyişəcək, amma komponent render edilməyəcək */}
-          <button type="button" onClick={this.changeColor}>Change color</button>
-        </div>
-      );
-    }
+
+  render() {
+    return (
+      <h1>
+        My Favorite Color is {this.state.favoritecolor}
+      </h1> /* Hal-hazırda rəngi göstəririk */
+    );
   }
-  
-  const root10 = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(<Header />); // Komponenti render edirik, amma yenidən render olunmamalıdır
-  
-  //* 3. render() metodu
-  //? **render()** metodu hər zaman yenilənmiş **state** və ya **props**-a uyğun olaraq HTML-i (JSX) DOM-a çıxarır.
-  //? Burada istifadəçi bir düyməni basaraq **state**-i dəyişdirə bilər və komponent yenidən render olunacaq.
-  
-  //* Misal: **render()** metodu ilə rəngin dəyişməsi
-  class Header extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {favoritecolor: "red"}; // Başlangıçda rəng "red"
-    }
-  
-    changeColor = () => {
-      this.setState({favoritecolor: "blue"}); // Rəngi "blue" etmək üçün **state**-i dəyişirik
-    }
-  
-    render() {
-      return (
-        <div>
-          <h1>My Favorite Color is {this.state.favoritecolor}</h1> {/* Yenilənmiş rəngi göstəririk */}
-          <button type="button" onClick={this.changeColor}>Change color</button> {/* Düymə ilə rəng dəyişir */}
-        </div>
-      );
-    }
+}
+
+const root12 = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Header />); // "Header" komponentini render edirik
+
+//* Updating Fazası (Updating Phase)
+//? **Updating** fazası, komponentin **state** və ya **props**-unda dəyişiklik olduğu zaman baş verir. Komponent yenidən render edilir.
+//? React, komponentin **state**-ində və ya **props**-unda dəyişiklik olduqda, komponenti yenidən render etmək üçün bir neçə metod istifadə edir.
+//? Aşağıdakı metodlar **Updating** fazasında çağırılır:
+//? 1. **getDerivedStateFromProps()**
+//? 2. **shouldComponentUpdate()**
+//? 3. **render()** (Bu metod hər zaman çağırılır)
+//? 4. **getSnapshotBeforeUpdate()**
+//? 5. **componentDidUpdate()**
+
+//* 1. getDerivedStateFromProps() metodu
+//? **getDerivedStateFromProps()** metodu **Updating** fazasında ilk çağırılan metoddur. Bu metod, komponentin **props**-larını əsas alaraq **state**-i yeniləməyə imkan verir.
+//? Komponentin props-u dəyişdikdə, bu metod yenilənən **state**-i qaytarmaq üçün istifadə olunur.
+
+//* Misal: getDerivedStateFromProps() metodu ilə rəngin dəyişməsi
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { favoritecolor: "red" }; // Başlangıçda rəng "red"
   }
-  
-  const root9 = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(<Header />); // Komponenti render edirik
-  
-  //* Qısa İzah:
-  // 1. **componentDidMount()** metodu, komponent DOM-a əlavə olunduqdan sonra işləyir. Burada, API çağırışları və ya digər işlər edilə bilər.
-  // 2. **shouldComponentUpdate()** metodu komponentin yenidən render edilib-edilməməsini təyin edir.
-  // 3. **render()** metodu isə komponentin HTML-i göstərmək üçün hər zaman çağırılır. **state** dəyişdikdə, bu metod yenidən işləyir və yeni HTML göstərilir.
-  // 4. **getDerivedStateFromProps()** metodu **props** dəyişəndə, **state**-i yeniləmək üçün istifadə olunur.
-  
- /* Bu kod nümunələri və izahlar tələbələrə React komponentlərinin həyat dövrü (lifecycle) və **state** dəyişikliklərinin necə idarə olunduğunu anlamağa kömək edəcək. Hər bir metodun funksiyasını aydın şəkildə başa düşmək üçün bu izahları addım-addım izah etmək vacibdir. */
-  
- //* getSnapshotBeforeUpdate() metodu
+
+  // **getDerivedStateFromProps()** metodu, komponentin props-u dəyişdikdə **state**-i yeniləyir
+  static getDerivedStateFromProps(props, state) {
+    return { favoritecolor: props.favcol }; // **favcol** prop-dan istifadə edərək **state**-i yeniləyirik
+  }
+
+  changeColor = () => {
+    this.setState({ favoritecolor: "blue" }); // Burada rəngi "blue" edirik
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>My Favorite Color is {this.state.favoritecolor}</h1>{" "}
+        {/* Yenilənmiş rəngi göstəririk */}
+        <button type="button" onClick={this.changeColor}>
+          Change color
+        </button>{" "}
+        {/* Burada istifadəçi rəngi dəyişə bilər */}
+      </div>
+    );
+  }
+}
+
+const root11 = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Header favcol="yellow" />); // **favcol** prop-u vasitəsilə "yellow" rəngini ekrana çıxarırıq
+
+//* 2. shouldComponentUpdate() metodu
+//? **shouldComponentUpdate()** metodu React-a komponentin yenidən render ediləcəyi barədə məlumat verir.
+//? Bu metodun qaytardığı **Boolean** (doğru və ya yanlış) dəyər, React-a komponenti yenidən render edib-etməyəcəyini söyləyir.
+//? Default olaraq, bu metod **true** dəyərini qaytarır, yəni hər zaman komponent yenidən render edilir.
+//? Əgər bu metod **false** qaytararsa, komponentin render olunması dayandırılır və yenidən render edilməyəcəkdir.
+
+//* Misal: **shouldComponentUpdate()** metodunun istifadəsi ilə komponentin yenidən render edilməməsi
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { favoritecolor: "red" }; // Başlangıçda rəng "red"
+  }
+
+  // **shouldComponentUpdate()** metodu "false" qaytararsa, render edilməyəcək
+  shouldComponentUpdate() {
+    return false; // Burada "false" qaytarırıq, yəni komponentin yenidən render olunmasını dayandırırıq
+  }
+
+  changeColor = () => {
+    this.setState({ favoritecolor: "blue" }); // Rəngi dəyişsə də, render edilmir
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>My Favorite Color is {this.state.favoritecolor}</h1>{" "}
+        {/* Bu rəng dəyişəcək, amma komponent render edilməyəcək */}
+        <button type="button" onClick={this.changeColor}>
+          Change color
+        </button>
+      </div>
+    );
+  }
+}
+
+const root10 = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Header />); // Komponenti render edirik, amma yenidən render olunmamalıdır
+
+//* 3. render() metodu
+//? **render()** metodu hər zaman yenilənmiş **state** və ya **props**-a uyğun olaraq HTML-i (JSX) DOM-a çıxarır.
+//? Burada istifadəçi bir düyməni basaraq **state**-i dəyişdirə bilər və komponent yenidən render olunacaq.
+
+//* Misal: **render()** metodu ilə rəngin dəyişməsi
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { favoritecolor: "red" }; // Başlangıçda rəng "red"
+  }
+
+  changeColor = () => {
+    this.setState({ favoritecolor: "blue" }); // Rəngi "blue" etmək üçün **state**-i dəyişirik
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>My Favorite Color is {this.state.favoritecolor}</h1>{" "}
+        {/* Yenilənmiş rəngi göstəririk */}
+        <button type="button" onClick={this.changeColor}>
+          Change color
+        </button>{" "}
+        {/* Düymə ilə rəng dəyişir */}
+      </div>
+    );
+  }
+}
+
+const root9 = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Header />); // Komponenti render edirik
+
+//* Qısa İzah:
+// 1. **componentDidMount()** metodu, komponent DOM-a əlavə olunduqdan sonra işləyir. Burada, API çağırışları və ya digər işlər edilə bilər.
+// 2. **shouldComponentUpdate()** metodu komponentin yenidən render edilib-edilməməsini təyin edir.
+// 3. **render()** metodu isə komponentin HTML-i göstərmək üçün hər zaman çağırılır. **state** dəyişdikdə, bu metod yenidən işləyir və yeni HTML göstərilir.
+// 4. **getDerivedStateFromProps()** metodu **props** dəyişəndə, **state**-i yeniləmək üçün istifadə olunur.
+
+/* Bu kod nümunələri və izahlar tələbələrə React komponentlərinin həyat dövrü (lifecycle) və **state** dəyişikliklərinin necə idarə olunduğunu anlamağa kömək edəcək. Hər bir metodun funksiyasını aydın şəkildə başa düşmək üçün bu izahları addım-addım izah etmək vacibdir. */
+
+//* getSnapshotBeforeUpdate() metodu
 //? **getSnapshotBeforeUpdate()** metodu, komponentin yenilənməsindən əvvəlki **props** və **state**-ə girişi təmin edir.
 //? Yəni, bu metodda komponentin əvvəlki vəziyyətini yoxlaya bilərsiniz, yenilənmədən əvvəlki dəyərləri görmək mümkün olur.
 //? Bu metodun istifadəsi, əgər komponentdə **getSnapshotBeforeUpdate()** metodu varsa, **componentDidUpdate()** metodunun da olması tələb olunur.
@@ -577,136 +591,139 @@ class Header extends React.Component {
 
 //* Misal: getSnapshotBeforeUpdate() metodunun istifadəsi ilə əvvəlki **state**-i görmək
 class Header extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {favoritecolor: "red"}; // Başlangıçda rəng "red"
-    }
-    
-    // componentDidMount() metodu ilə rəng "yellow" olaraq dəyişir
-    componentDidMount() {
-      setTimeout(() => {
-        this.setState({favoritecolor: "yellow"});
-      }, 1000); // 1 saniyə sonra rəngi "yellow" edirik
-    }
-  
-    // getSnapshotBeforeUpdate() metodu, yenilənmə başlamazdan əvvəl **prevState**-i əldə etməyə imkan verir
-    getSnapshotBeforeUpdate(prevProps, prevState) {
-      // Burada əvvəlki rəngi "div1" elementinə yazdırırıq
-      document.getElementById("div1").innerHTML =
-        "Before the update, the favorite was " + prevState.favoritecolor;
-    }
-  
-    // componentDidUpdate() metodu, yeniləmədən sonra işləyir və yeni rəng məlumatını "div2"-yə yazdırır
-    componentDidUpdate() {
-      document.getElementById("div2").innerHTML =
-        "The updated favorite is " + this.state.favoritecolor;
-    }
-  
-    render() {
-      return (
-        <div>
-          <h1>My Favorite Color is {this.state.favoritecolor}</h1>
-          <div id="div1"></div> {/* Əvvəlki rəngin göstəriləcəyi element */}
-          <div id="div2"></div> {/* Yeni rəngin göstəriləcəyi element */}
-        </div>
-      );
-    }
+  constructor(props) {
+    super(props);
+    this.state = { favoritecolor: "red" }; // Başlangıçda rəng "red"
   }
-  
-  const root15 = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(<Header />); // Komponenti render edirik
-  
-  //* componentDidUpdate metodu
-  //? **componentDidUpdate()** metodu, komponent DOM-da yeniləndikdən sonra çağırılır.
-  //? Aşağıdakı misalda, komponent "mount" edildikdən sonra "red" rəngində render edilir.
-  //? Sonra, **componentDidMount()** metodunda bir zamanlayıcı ilə **state** dəyişdirilir və rəng "yellow" olur.
-  //? Bu hərəkət **update** fazasını tetikler və **componentDidUpdate()** metodu işləyir, burada yeni rəng **div** elementinə yazılır.
-  
-  //* Misal: componentDidUpdate() metodu ilə yenilənmiş rəngin göstərilməsi
-  class Header extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {favoritecolor: "red"}; // Başlangıçda rəng "red"
-    }
-  
-    componentDidMount() {
-      setTimeout(() => {
-        this.setState({favoritecolor: "yellow"}); // 1 saniyə sonra rəng "yellow" olur
-      }, 1000);
-    }
-  
-    // componentDidUpdate() metodu, yeniləmə tamamlandıqdan sonra çağırılır
-    componentDidUpdate() {
-      document.getElementById("mydiv").innerHTML =
-        "The updated favorite is " + this.state.favoritecolor;
-    }
-  
-    render() {
-      return (
-        <div>
-          <h1>My Favorite Color is {this.state.favoritecolor}</h1> {/* Yenilənmiş rəngi göstəririk */}
-          <div id="mydiv"></div> {/* Yeni rəngin göstəriləcəyi element */}
-        </div>
-      );
-    }
+
+  // componentDidMount() metodu ilə rəng "yellow" olaraq dəyişir
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ favoritecolor: "yellow" });
+    }, 1000); // 1 saniyə sonra rəngi "yellow" edirik
   }
-  
-  const root14 = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(<Header />); // Komponenti render edirik
-  
-  //* Unmounting (Komponentin Silinməsi)
-  //? Sonrakı faza, komponent DOM-dan silindikdə baş verir. React buna **Unmounting** deyir.
-  //? React-un yalnız bir **built-in** metodu var ki, komponent silinərkən çağırılır: **componentWillUnmount()**
-  //? **componentWillUnmount()** metodu komponent DOM-dan silinməzdən əvvəl çağırılır. Bu metodda komponentin təmizlənməsi ilə bağlı əməliyyatlar (məsələn, event listener-lərin silinməsi) edə bilərsiniz.
-  
-  //* Misal: **componentWillUnmount()** metodu ilə komponentin silinməsi
-  class Container extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {show: true}; // Başlangıçda header göstərilir
-    }
-  
-    delHeader = () => {
-      this.setState({show: false}); // Başlıq gizlədilir
-    }
-  
-    render() {
-      let myheader;
-      if (this.state.show) {
-        myheader = <Child />; // Başlıq göstərilir
-      }
-  
-      return (
-        <div>
-          {myheader} {/* Başlıq burada göstərilir */}
-          <button type="button" onClick={this.delHeader}>Delete Header</button> {/* Başlığı silmək üçün düymə */}
-        </div>
-      );
-    }
+
+  // getSnapshotBeforeUpdate() metodu, yenilənmə başlamazdan əvvəl **prevState**-i əldə etməyə imkan verir
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    // Burada əvvəlki rəngi "div1" elementinə yazdırırıq
+    document.getElementById("div1").innerHTML =
+      "Before the update, the favorite was " + prevState.favoritecolor;
   }
-  
-  class Child extends React.Component {
-    // componentWillUnmount() metodu, komponent silinməzdən əvvəl çağırılır
-    componentWillUnmount() {
-      alert("The component named Header is about to be unmounted.");
-      // Komponent silinmədən əvvəl xəbərdarlıq mesajı göstəririk
-    }
-  
-    render() {
-      return (
-        <h1>Hello World!</h1> /* Bu, başlıq komponentinin içindəki məzmundur */
-      );
-    }
+
+  // componentDidUpdate() metodu, yeniləmədən sonra işləyir və yeni rəng məlumatını "div2"-yə yazdırır
+  componentDidUpdate() {
+    document.getElementById("div2").innerHTML =
+      "The updated favorite is " + this.state.favoritecolor;
   }
-  
-  const root13 = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(<Container />); // "Container" komponentini render edirik
-  
-  //* Qısa İzah:
-  // 1. **getSnapshotBeforeUpdate()** metodu, komponentin **state** və ya **props**-unda yenilənmə baş vermədən əvvəlki vəziyyəti əldə etməyə imkan verir.
-  // 2. **componentDidUpdate()** metodu isə, yenilənmə tamamlandıqdan sonra, yeni **state** və **props** ilə işləyir və DOM-a yazılır.
-  // 3. **componentWillUnmount()** metodu komponent silinməzdən əvvəl çağırılır və komponentin təmizlənməsi üçün istifadə olunur.
-  
-  //? Bu metodlar, React komponentlərinin həyat dövrünün vacib mərhələlərindəndir və hər birinin fərqli məqsədləri və istifadəsi var. 
-  //? Tələbələrə hər bir metodun funksiyasını başa düşməyə və tətbiq etməyə kömək edəcək. Bu izahlar, onların React lifecycle haqqında daha yaxşı anlayış əldə etmələrini təmin edəcək.
-  
+
+  render() {
+    return (
+      <div>
+        <h1>My Favorite Color is {this.state.favoritecolor}</h1>
+        <div id="div1"></div> {/* Əvvəlki rəngin göstəriləcəyi element */}
+        <div id="div2"></div> {/* Yeni rəngin göstəriləcəyi element */}
+      </div>
+    );
+  }
+}
+
+const root15 = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Header />); // Komponenti render edirik
+
+//* componentDidUpdate metodu
+//? **componentDidUpdate()** metodu, komponent DOM-da yeniləndikdən sonra çağırılır.
+//? Aşağıdakı misalda, komponent "mount" edildikdən sonra "red" rəngində render edilir.
+//? Sonra, **componentDidMount()** metodunda bir zamanlayıcı ilə **state** dəyişdirilir və rəng "yellow" olur.
+//? Bu hərəkət **update** fazasını tetikler və **componentDidUpdate()** metodu işləyir, burada yeni rəng **div** elementinə yazılır.
+
+//* Misal: componentDidUpdate() metodu ilə yenilənmiş rəngin göstərilməsi
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { favoritecolor: "red" }; // Başlangıçda rəng "red"
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ favoritecolor: "yellow" }); // 1 saniyə sonra rəng "yellow" olur
+    }, 1000);
+  }
+
+  // componentDidUpdate() metodu, yeniləmə tamamlandıqdan sonra çağırılır
+  componentDidUpdate() {
+    document.getElementById("mydiv").innerHTML =
+      "The updated favorite is " + this.state.favoritecolor;
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>My Favorite Color is {this.state.favoritecolor}</h1>{" "}
+        {/* Yenilənmiş rəngi göstəririk */}
+        <div id="mydiv"></div> {/* Yeni rəngin göstəriləcəyi element */}
+      </div>
+    );
+  }
+}
+
+const root14 = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Header />); // Komponenti render edirik
+
+//* Unmounting (Komponentin Silinməsi)
+//? Sonrakı faza, komponent DOM-dan silindikdə baş verir. React buna **Unmounting** deyir.
+//? React-un yalnız bir **built-in** metodu var ki, komponent silinərkən çağırılır: **componentWillUnmount()**
+//? **componentWillUnmount()** metodu komponent DOM-dan silinməzdən əvvəl çağırılır. Bu metodda komponentin təmizlənməsi ilə bağlı əməliyyatlar (məsələn, event listener-lərin silinməsi) edə bilərsiniz.
+
+//* Misal: **componentWillUnmount()** metodu ilə komponentin silinməsi
+class Container extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { show: true }; // Başlangıçda header göstərilir
+  }
+
+  delHeader = () => {
+    this.setState({ show: false }); // Başlıq gizlədilir
+  };
+
+  render() {
+    let myheader;
+    if (this.state.show) {
+      myheader = <Child />; // Başlıq göstərilir
+    }
+
+    return (
+      <div>
+        {myheader} {/* Başlıq burada göstərilir */}
+        <button type="button" onClick={this.delHeader}>
+          Delete Header
+        </button>{" "}
+        {/* Başlığı silmək üçün düymə */}
+      </div>
+    );
+  }
+}
+
+class Child extends React.Component {
+  // componentWillUnmount() metodu, komponent silinməzdən əvvəl çağırılır
+  componentWillUnmount() {
+    alert("The component named Header is about to be unmounted.");
+    // Komponent silinmədən əvvəl xəbərdarlıq mesajı göstəririk
+  }
+
+  render() {
+    return (
+      <h1>Hello World!</h1> /* Bu, başlıq komponentinin içindəki məzmundur */
+    );
+  }
+}
+
+const root13 = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Container />); // "Container" komponentini render edirik
+
+//* Qısa İzah:
+// 1. **getSnapshotBeforeUpdate()** metodu, komponentin **state** və ya **props**-unda yenilənmə baş vermədən əvvəlki vəziyyəti əldə etməyə imkan verir.
+// 2. **componentDidUpdate()** metodu isə, yenilənmə tamamlandıqdan sonra, yeni **state** və **props** ilə işləyir və DOM-a yazılır.
+// 3. **componentWillUnmount()** metodu komponent silinməzdən əvvəl çağırılır və komponentin təmizlənməsi üçün istifadə olunur.
+
+//? Bu metodlar, React komponentlərinin həyat dövrünün vacib mərhələlərindəndir və hər birinin fərqli məqsədləri və istifadəsi var.
+//? Tələbələrə hər bir metodun funksiyasını başa düşməyə və tətbiq etməyə kömək edəcək. Bu izahlar, onların React lifecycle haqqında daha yaxşı anlayış əldə etmələrini təmin edəcək.

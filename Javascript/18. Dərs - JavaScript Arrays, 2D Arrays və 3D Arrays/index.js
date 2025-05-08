@@ -8,8 +8,9 @@
 //* let arrayName = [dəyər1, dəyər2, dəyər3, ...];
 
 //? **Nümunə**: Sadə bir array yaratmaq:
-let fruits = ["alma", "banan", "kivi", "portağal"];
-console.log(`fruits[0]`);  //? "alma" ekrana yazılacaq
+let fruits = ["alma", "çiyələk", "kivi", "portağal"];
+console.log(fruits[0]);  //? "alma" ekrana yazılacaq
+
 
 //? **Array-lara Dəyər Təyin Etmək və Göstərmək**
 //? Array-lara dəyər təyin etmək üçün indekslərdən istifadə edirik.

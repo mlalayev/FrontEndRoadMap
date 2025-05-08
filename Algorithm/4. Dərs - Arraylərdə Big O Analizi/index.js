@@ -12,6 +12,7 @@
 
 //? **1.1 - Sonuna element əlavə etmək (push) - O(1)**
 const numbers = [1, 2, 3];
+
 numbers.push(4);
 console.log(numbers); //? [1, 2, 3, 4]
 
