@@ -83,7 +83,6 @@ console.log(containsGrape); //? true
 fruits.forEach((fruit) => {
   console.log(fruit);
 });
-//? "grape", "orange", "pear"
 
 //* 13. **Array.map()**
 //? Bu metod, massivdəki hər bir elementi bir funksiya ilə dəyişdirir və yeni bir massiv qaytarır.
