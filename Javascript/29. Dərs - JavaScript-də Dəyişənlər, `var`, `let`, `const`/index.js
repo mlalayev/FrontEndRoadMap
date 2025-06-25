@@ -26,7 +26,7 @@ console.log(y); //? 30
 //? Yalnız bir dəfə təyin edilə bilər və daha sonra dəyəri dəyişdirilə bilməz. Lakin obyektlər və massivlər kimi kompleks verilənlərdə, onların özəllikləri dəyişdirilə bilər.
 //? **Nümunə:**
 const z = 50;
-// z = 60;  //? Bu xətt səhv verir, çünki `const` ilə təyin edilən dəyişənin dəyəri dəyişdirilə bilməz.
+// z = 60;  //? Bu sətr səhv verir, çünki `const` ilə təyin edilən dəyişənin dəyəri dəyişdirilə bilməz.
 console.log(z); //? 50
 
 //* **2. Hoisting (Qaldırma)**

@@ -3,7 +3,7 @@
 //* **Promise Nədir?**
 
 //* Promise
-//* İnsanlar bir fəaliyyət görmək üçün ya özlərinə, ya da başqalarına vəd verirlər. Əgər biz verdiyimiz vədi tutarsaq, başqalarını sevindirərik, əgər tutmasaq, narazılıq doğura bilər. JavaScript-də Promise də yuxarıdakı misallarla oxşar bir konseptə malikdir.
+//* İnsanlar bir fəaliyyət görmək üçün ya özlərinə, ya da başqalarına vəd verirlər. Əgər biz verdiyimiz vədi tutarsaq, başqalarını sevindirərik, əgər tutmasaq, narazılıq doğura bilər. JavaScript-də Promise də yuxarıdakı misallara oxşar bir konseptə malikdir.
 
 //* Promise, JavaScript-də asinxron əməliyyatları idarə etmək üçün bir yoldur. Bu, asinxron əməliyyatların gələcəkdə uğurlu nəticəsini və ya uğursuzluq səbəbini idarə etməyə imkan verir. Bu, asinxron metodların sinxron metodlar kimi dəyərləri geri qaytarmasına imkan verir: dərhal son dəyəri qaytarmaq əvəzinə, asinxron metod, gələcəkdə bu dəyəri təmin etmək üçün bir vəd (Promise) qaytarır.
 
@@ -137,7 +137,7 @@ console.log(value);
 // İndi, həm promise metodunu, həm də async və await metodunu istifadə edərək API məlumatlarını əldə edək.
 
 // Promise
-const url1 = "https://restcountries.com/v2/all";
+const url1 = "https://restcountries.com/v3.1/all";
 fetch(url1)
   .then((response) => response.json())
   .then((data) => console.log(data))

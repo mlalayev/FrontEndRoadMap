@@ -5,7 +5,7 @@
 //? JavaScript ilə CSS tərzlərini dəyişdirə bilərik, məsələn, elementin rəngini, ölçüsünü və ya arxa planını dəyişdirmək.
 
 //* **1. Elementin Stilini Dəyişdirmək**
-//? Elementin stilini dəyişdirmək üçün `style` xüsusiyyətini istifadə edərik.
+//? Elementin stilini dəyişdirmək üçün `style` xüsusiyyətini istifadə edirik.
 //? Məsələn, bir elementin `background-color` və `font-size` stilini dəyişdirək.
 //? **Nümunə:**
 let myElement = document.getElementById("myElement");
@@ -46,7 +46,8 @@ let newParagraph = document.createElement("p");
 newParagraph.textContent = "Bu yeni bir paragrafdır.";
 
 // 3. Yeni elementləri səhifəyə əlavə edirik
-document.body.appendChild(newDiv); //? Yeni div elementini body-yə əlavə edirik
+const body = document.querySelector("body")
+body.appendChild(newDiv); //? Yeni div elementini body-yə əlavə edirik
 newDiv.appendChild(newParagraph); //? Yeni p elementini div-ə əlavə edirik
 
 //? **5. Yaradılan Elementin Stilini Dəyişdirmək**

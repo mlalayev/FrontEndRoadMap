@@ -16,6 +16,7 @@ for (let i = 0; i < 5; i++) {
   console.log(`For Loop: ${i}`); //* Nəticə: 0, 1, 2, 3, 4
 }
 
+
 //* **2. `while` Döngüsü**
 //? Şərt doğru olduğu müddətcə təkrarlanır. Təkrarlama sayı əvvəlcədən bilinməyə bilər.
 

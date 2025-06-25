@@ -2,11 +2,11 @@
 
 //? **JavaScript Nədir?**
 //? JavaScript (JS), veb səhifələrində interaktivliyi təmin edən proqramlaşdırma dilidir.
-//? JavaScript istifadə edərək səhifənin dinamikliyini artırmaq, istifadəçi ilə əlaqə qurmaq, formaları emal etmək və ya səhifənin məzmununu dəyişdirmək mümkündür.
+//? JavaScript istifadə edərək səhifənin dinamikliyini artırmaq, istifadəçi ilə əlaqə qurmaq, formları emal etmək və ya səhifənin məzmununu dəyişdirmək mümkündür.
 //? Veb səhifələrində **HTML** və **CSS** ilə birlikdə işləyir, amma JS səhifənin **dinamik** xüsusiyyətlərini təmin edir.
 //? JavaScript istifadə etmədən statik bir səhifə yarada bilərsiniz, amma interaktivlik (animasiya, istifadəçi reaksiyaları, məlumat göndərmə və s.) olmadan bu səhifə çox sadə olacaq.
 
-//* **Niye JavaScript-ə Ehtiyac Var?**
+//* **Niyə JavaScript-ə Ehtiyac Var?**
 //? JavaScript veb səhifələrinə dinamiklik əlavə etməyə imkan verir. Məsələn:
 //? - İstifadəçi ilə əlaqə qurmaq (formaları emal etmək, sorğular göndərmək)
 //? - Dinamik olaraq səhifə məzmununu dəyişmək (elementləri gizlətmək/göstərmək, animasiyalar yaratmaq)
@@ -41,6 +41,7 @@
 
 //? **JavaScript-də Məlumat Növləri (Data Types)**:
 //? JavaScript-də əsas olaraq 3 növ məlumat var: **Boolean**, **String**, və **Number**.
+
 
 //? **Boolean (True/False)**:
 //? Boolean, yalnız iki dəyərdən birini qəbul edir: `true` və ya `false`.

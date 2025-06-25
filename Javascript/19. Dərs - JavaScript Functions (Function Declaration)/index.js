@@ -48,14 +48,14 @@ greetPerson("Əli"); //? "Salam, Əli!" mesajı ekrana yazılacaq
 //? 3. **İsmi Anlayışlı Funksiyalar**: Funksiyaların adı, nə iş görəcəyi haqqında aydın bir fikir verməlidir.
 //? 4. **Yaxşı Parametr İstifadəsi**: Funksiyalar daxilindəki parametr və argümentlər sadə və başa düşülən olmalıdır. Çox parametrlərdən çəkinin.
 
-//* **Yaxşı Funksiya Yaratma Nümunəsi**:
+//* **Funksiya Yaratma Nümunəsi**:
 function add(a, b) {
   return a + b; //? iki ədədi toplamaq
 }
 
 console.log(add(5, 7)); //? 12 ekrana yazılacaq
 
-//* **Yaxşı Funksiya Yazmaq üçün Məsləhətlər**:
+//* **Doğru Funksiya Yazmaq üçün Məsləhətlər**:
 //? 1. **Bir Funksiya, Bir Məqsəd**: Funksiyanın yalnız bir məsələni həll etməsi çox vacibdir. Məsələn, bir funksiya yalnız iki ədəd toplamalıdır.
 //? 2. **Qısa və Anlayışlı Olun**: Funksiya mümkün qədər qısa və aydın olmalıdır. Çox uzun funksiyalar oxunmasını çətinləşdirir.
 //? 3. **Parametrlərin Sayını Azaltmaq**: Çox sayda parametr funksiyanı qarışıq hala gətirə bilər. Əgər bir çox parametr lazımdırsa, onları obyekt olaraq göndərmək daha yaxşıdır.

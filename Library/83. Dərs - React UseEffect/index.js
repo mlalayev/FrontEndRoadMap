@@ -47,6 +47,7 @@ import { useState, useEffect } from "react";
 
 function Counter() {
   const [say, setSay] = useState(0);
+  const [color,setColor] = useState("red")
 
   useEffect(() => {
     console.log("Say dəyişdi:", say);

@@ -6,7 +6,7 @@
 //? Primitive verilən növləri sadə və dəyişməz verilənlərdir. Onlar birbaşa dəyər saxlayır və yaddaşda sadə strukturlara sahibdirlər.
 //? Bunlar immutable (dəyişməz) verilən növləridir.
 
-let number = 10; // `number` - sayısal verilən növü
+let a = 10; // `number` - sayısal verilən növü
 let string = "Hello"; // `string` - mətn verilən növü
 let boolean = true; // `boolean` - mantıksal (true / false) verilən növü
 let nullValue = null; // `null` - heç bir dəyər yoxdur

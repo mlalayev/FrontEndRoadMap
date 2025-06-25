@@ -7,7 +7,7 @@
 //* **Array Metodlarının Tam Siyahısı və Təsvirləri**:
 
 //* 1. **Array.push()**
-//? Bu metod, massivə bir və ya bir neçə yeni element əlavə edir və yeni massiv uzunluğunu qaytarır.
+//? Bu metod, massivə bir yeni element əlavə edir və yeni massiv uzunluğunu qaytarır.
 //? **Nümunə:**
 let fruits = ["apple", "banana"];
 fruits.push("orange");

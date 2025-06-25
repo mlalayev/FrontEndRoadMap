@@ -25,7 +25,7 @@ for (let i = 0; i < 10; i++) {
   console.log(i);
 }
 
-//? Yuxarıdakı nümunədə `i` 5 olduqda, `continue` komutu icra edilir və `i` 5-ə bərabər olan iterasiya atlanır, nəticədə 0-dan 9-a qədər olan dəyərlər göstərilir, amma 5 istisna olunur.
+//? Yuxarıdakı nümunədə `i` 5 olduqda, `continue` kodu icra edilir və `i` 5-ə bərabər olan iterasiya atlanır, nəticədə 0-dan 9-a qədər olan dəyərlər göstərilir, amma 5 istisna olunur.
 
 //* **Break və Continue arasındakı fərqlər:**
 

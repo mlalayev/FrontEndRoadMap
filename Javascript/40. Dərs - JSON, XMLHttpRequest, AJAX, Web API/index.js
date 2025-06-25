@@ -32,7 +32,7 @@ console.log(jsonString2); //? '{"name":"Alice","age":25}'
 
 //* **XMLHttpRequest Nədir?**
 //? `XMLHttpRequest` (XHR), veb səhifəsinin serverlə əlaqə qurmasına və serverdən məlumat almasına imkan verən JavaScript obyektidir.
-//? XHR, AJAX ilə əlaqələndirilir və JavaScript istifadə edərək asenkron HTTP sorğuları göndərməyə və cavabları almağa imkan verir.
+//? XHR, AJAX ilə əlaqələndirilir və JavaScript istifadə edərək asinxron HTTP sorğuları göndərməyə və cavabları almağa imkan verir.
 //? `XMLHttpRequest` əsasında məlumatı göndərmək və qəbul etmək üçün istifadə olunur, amma çox zaman müasir tətbiqlərdə fetch API və ya axios kimi kitabxanalar üstünlük təşkil edir.
 
 //* **Nümunə: XMLHttpRequest ilə HTTP Sorğusu Göndərmək**:

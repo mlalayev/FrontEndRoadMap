@@ -2,16 +2,18 @@
 
 //? **LocalStorage və SessionStorage Nədir?**
 //? `localStorage` və `sessionStorage` brauzer tərəfindən təmin edilən müvəqqəti məlumat saxlama mexanizmləridir. Hər iki metod JavaScript vasitəsilə istifadə edilə bilər və məlumatları müvəqqəti olaraq saxlayır.
-//? Bu iki metod arasındakı fərq, `localStorage` məlumatları brauzerin təkrar açılmasında da saxlayır, amma `sessionStorage` yalnız cari sessiya ərzində saxlanır (yəni, səhifə yeniləndikdə məlumatlar silinir).
+//? Bu iki metod arasındakı fərq, `localStorage` məlumatları brauzerin təkrar açılmasında da saxlayır, amma `sessionStorage` yalnız cari sessiya ərzində saxlanır (yəni, browser açılıb bağlandıqdan sonra məlumatlar silinir).
 
 //? **localStorage Nədir?**
 //? `localStorage` vasitəsilə saxlamağa qoyduğunuz məlumatlar, brauzerin bağlanması və açılması ilə silinmir. Bu məlumatlar daha uzun müddət saxlanır.
 //? Məlumatlar "key-value" cütləri şəklində saxlanır. 5MB qədər məlumat saxlamağa icazə verir.
 
-let user = { name: "John", age: 30 };
-localStorage.setItem("user", JSON.stringify(user)); // Məlumatı localStorage-a saxlamaq
 
-let storedUser = JSON.parse(localStorage.getItem("user")); // localStorage-dan məlumatı oxumaq
+
+let user = { name: "John", age: 30 };
+localStorage.setItem("istifadeci", JSON.stringify(user)); // Məlumatı localStorage-a saxlamaq
+
+let storedUser = JSON.parse(localStorage.getItem("istifadeci")); // localStorage-dan məlumatı oxumaq
 console.log(storedUser.name); //? "John"
 
 //? **sessionStorage Nədir?**

@@ -28,7 +28,7 @@ console.log(str.includes("Script")); //? true
 console.log(str.includes("Python")); //? false
 
 //* **5. `indexOf()`**
-//? Verilən mətnin indeksini qaytarır, əgər tapılarsa, tapılmazsa `-1` qaytarır.
+//? Əgər tapılarsa verilən mətnin indeksini qaytarır,  tapılmazsa `-1` qaytarır.
 //? **Nümunə:**
 console.log(str.indexOf("S")); //? 4
 console.log(str.indexOf("Python")); //? -1
